@@ -1,0 +1,26 @@
+@import "tailwindcss";
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+    --font-fredoka: "Fredoka", sans-serif;
+    --font-quicksand: "Quicksand", sans-serif;
+    /* Variabel Warna Background/Umum */
+    --color-primary: #e9f1f7;
+    --color-secondary: #e1ecf4;
+    --color-darker: #D2E2EF;
+    --color-accent: #ff9f1c;
+    --color-gray: #76877D;
+
+    /* Variabel Warna Teks Khusus */
+    --color-main: #1f2421;
+    --color-special: #ff9f1c;
+    --color-bright: #FDF7FA;
+}
