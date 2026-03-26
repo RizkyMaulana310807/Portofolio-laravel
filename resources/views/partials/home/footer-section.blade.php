@@ -34,10 +34,9 @@
                     <a href="#"
                         class="text-base underline underline-offset-4 decoration-dotted hover:text-blue-500 transition-all duration-200 ease-in-out">Laravel/PHP</a>
                     <a href="#"
-                        class="text-base underline underline-offset-4 decoration-dotted hover:text-blue-500 transition-all duration-200 ease-in-out">Docker</a>
+                        class="text-base underline underline-offset-4 decoration-dotted hover:text-blue-500 transition-all duration-200 ease-in-out">React Native</a>
                     <a href="#"
-                        class="text-base underline underline-offset-4 decoration-dotted hover:text-blue-500 transition-all duration-200 ease-in-out">Game
-                        Logic</a>
+                        class="text-base underline underline-offset-4 decoration-dotted hover:text-blue-500 transition-all duration-200 ease-in-out">Tailwindcss</a>
                     <a href="#"
                         class="text-base underline underline-offset-4 decoration-dotted hover:text-blue-500 transition-all duration-200 ease-in-out">
                         Javascript</a>

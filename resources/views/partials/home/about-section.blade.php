@@ -1,6 +1,6 @@
 <div class="w-screen h-screen flex">
     <div class="w-screen h-full bg-primary border-4 border-darker p-8">
-        <div x-data="{ tab: 'about' }" class="flex flex-col items-center justify-center h-full">
+        <div x-data="{ tab: 'skills' }" class="flex flex-col items-center justify-center h-full">
             <!-- Menu -->
             <div class="bg-primary inline-flex rounded-md border-4 border-darker">
 
@@ -75,8 +75,44 @@
                     </div>
                 </div>
 
-                <div x-show="tab === 'skills'">
-                    Content skills
+                <div x-show="tab === 'skills'" class="flex flex-row h-full w-full bg-yellow-500">
+                    <div class="bg-special w-1/2">
+                        <div class="bg-red-500 text-4xl font-fredoka font-bold flex justify-center p-4">
+                            <h1><i class="fas fa-terminal"></i> SKILLS <i class="fas fa-code"></i></h1>
+                        </div>
+                        <div class="bg-yellow-500 flex flex-row w-full">
+                            <div class="flex w-3/12 h-full bg-blue-500 flex-col">
+                                <div class="flex items-center justify-center w-36 h-36 bg-green-500 border">
+                                    <i class="fa-brands fa-php text-8xl text-[#777BB4]"></i>
+                                </div>
+                                <div class="flex items-center justify-center w-36 h-36 bg-green-500 border">
+                                    <i class="fa-brands fa-laravel text-8xl text-[#FF2D20]"></i>
+                                </div>
+                                <div class="flex items-center justify-center w-36 h-36 bg-green-500 border">
+                                    <i class="fa-brands fa-js text-8xl text-[#F7DF1E]"></i>
+                                </div>
+                                <div class="flex items-center justify-center w-36 h-36 bg-green-500 border">
+                                    <i class="fa-brands fa-react text-8xl text-[#61DAFB]"></i>
+                                </div>
+                            </div>
+                            <div class="flex flex-col w-full h-full bg-primary p-4 border-2 border-darker rounded-xl m-4 gap-8">
+                                <x-progress-bar-card :current="3"></x-progress-bar-card>
+                                <x-progress-roadmap :current="3"></x-progress-roadmap>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-bright w-1/2 h-full">
+                        <div>
+                            <h1>Sertification</h1>
+                        </div>
+                        <div>
+                            <h1>
+
+                            </h1>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
