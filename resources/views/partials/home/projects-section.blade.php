@@ -1,4 +1,7 @@
-    <div class="w-screen h-screen flex">
+    <div class="w-screen h-screen flex flex-col">
+        <div class="w-screen flex justify-center items-center bg-secondary p-4">
+            <h1 class="text-min text-4xl font-fredoka font-bold">Favorite Projects</h1>
+        </div>
         <div class="w-screen h-full bg-primary flex items-center justify-center space-x-8" id="track">
             <x-project-card title="Pengalaman Magang" subtitle="GAMELAB INDONESIA" number="01"
                 image="https://www.gamelab.id/img/share-v3.png?v=3.12" :tags="['Intern', 'Javascript', 'Phaser.JS', 'Game Developer']" icon="fa-briefcase" :playable="false" />

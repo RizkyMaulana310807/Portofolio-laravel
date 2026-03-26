@@ -54,7 +54,7 @@
                         <div class="w-36 h-36 rounded-full bg-accent absolute z-10 left-95 top-37 -translate-x-1/2 -translate-y-1/2 transition-all duration-300 ease-out"
                             id="mouseCircle"></div>
 
-                            <div class="w-full h-full absolute bg-red-500/0 z-50 rounded-2xl" id="mouseMovementArea"></div>
+                        <div class="w-full h-full absolute bg-red-500/0 z-50 rounded-2xl" id="mouseMovementArea"></div>
 
                         <div class="flex items-start w-full space-x-14">
                             <h1 class="text-6xl font-fredoka font-semibold z-20">
@@ -68,11 +68,9 @@
                                 Seorang pengembang yang berfokus pada arsitektur logika, baik untuk web, mobile, maupun
                                 game. Dengan pengalaman komersial di Laravel (PHP) dan React Native (EAS Build), saya
                                 membangun
-                                sistem yang stabil dan efisien. Sebagai pengembang logika game, saya berdedikasi
-                                mewujudkan visi
-                                teknis klien melalui eksekusi kode yang presisi. Saya percaya bahwa setiap baris kode
-                                harus
-                                menjadi solusi seperti presisi mekanik yang saya terapkan dalam hobi otomotif saya</p>
+                                sistem yang stabil dan efisien. Saya berpengalaman freelance untuk membuat aplikasi
+                                berbasis laravel (website) dan aplikasi berbasis react native (mobile) selama kurang
+                                lebih 6 bulan.</p>
                         </div>
                     </div>
                 </div>
