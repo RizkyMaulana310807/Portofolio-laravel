@@ -8,11 +8,14 @@
     x-data="{
         levels: @js($levels),
         current: {{ $current }},
+        total: {{ count($levels) }},
         animated: 0,
+        done: false,
         intervalId: null,
 
         startAnimation() {
             this.animated = 0;
+            this.done = false;
             clearInterval(this.intervalId);
             let i = 1;
             this.intervalId = setInterval(() => {
@@ -21,6 +24,9 @@
                     i++;
                 } else {
                     clearInterval(this.intervalId);
+                    if (this.current >= this.total) {
+                        setTimeout(() => { this.done = true; }, 400);
+                    }
                 }
             }, 400);
         },
@@ -34,7 +40,23 @@
     {{-- Icon --}}
     <div class="flex h-24 w-24 items-center justify-center">
         <span class="p-1.5 py-2.5 rounded-full">
-            <i class="fas fa-spinner fa-spin font-bold text-green-500 text-4xl"></i>
+
+            {{-- Spinner: tampil selama belum done --}}
+            <i
+                class="fas fa-spinner fa-spin font-bold text-green-500 text-4xl"
+                x-show="!done"
+            ></i>
+
+            {{-- Check: tampil setelah done dengan animasi --}}
+            <i
+                class="fas fa-check-circle font-bold text-green-500 text-4xl"
+                x-show="done"
+                x-transition:enter="transition duration-500"
+                x-transition:enter-start="opacity-0 scale-50"
+                x-transition:enter-end="opacity-100 scale-100"
+                style="display: none;"
+            ></i>
+
         </span>
     </div>
 

@@ -12,14 +12,12 @@
         "Noto Color Emoji";
     --font-fredoka: "Fredoka", sans-serif;
     --font-quicksand: "Quicksand", sans-serif;
-    /* Variabel Warna Background/Umum */
+    /* Variabel Warna Umum */
     --color-primary: #e9f1f7;
     --color-secondary: #e1ecf4;
     --color-darker: #D2E2EF;
     --color-accent: #ff9f1c;
     --color-gray: #76877D;
-
-    /* Variabel Warna Teks Khusus */
     --color-main: #1f2421;
     --color-special: #ff9f1c;
     --color-bright: #FDF7FA;

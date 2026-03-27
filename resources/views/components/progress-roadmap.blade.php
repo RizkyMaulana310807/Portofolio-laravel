@@ -26,15 +26,18 @@
     class="flex flex-col w-full h-full border-2 border-darker rounded-lg"
     x-data="{
         checked: 0,
+        displayed: 0,
         intervalId: null,
 
         startAnimation() {
             this.checked = 0;
+            this.displayed = 0;
             clearInterval(this.intervalId);
             setTimeout(() => {
                 this.intervalId = setInterval(() => {
                     if (this.checked < {{ $current }}) {
                         this.checked++;
+                        this.displayed++;
                     } else {
                         clearInterval(this.intervalId);
                     }
@@ -46,14 +49,16 @@
             this.startAnimation();
         }
     }"
-    @roadmap-changed.window="startAnimation()"  {{-- ← reset tiap tab berganti --}}
+    @roadmap-changed.window="startAnimation()"
 >
 
     {{-- Header --}}
     <div class="flex flex-row justify-between w-full p-4 border-b-2 border-darker">
         <span><i class="fas fa-seedling text-green-500 text-lg"></i></span>
         <h1 class="font-quicksand font-bold text-main">Progress Roadmap</h1>
-        <span class="font-quicksand text-sm text-main">{{ $current }}/{{ count($steps) }}</span>
+        <span class="font-quicksand text-sm text-main">
+            <span x-text="displayed"></span>/{{ count($steps) }}
+        </span>
     </div>
 
     {{-- List --}}
@@ -64,13 +69,11 @@
                 {{-- Icon --}}
                 <div class="flex w-12 justify-center p-4 pt-1 shrink-0">
 
-                    {{-- Spinner: tampil selama belum dicek --}}
                     <i
                         class="fas fa-spinner text-3xl text-gray-400 icon-spin"
                         x-show="checked <= {{ $i }}"
                     ></i>
 
-                    {{-- Check: tampil setelah dicek, tanpa animasi gerak --}}
                     <i
                         class="fas fa-check-circle text-3xl text-green-500"
                         x-show="checked > {{ $i }}"
