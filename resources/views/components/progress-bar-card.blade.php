@@ -9,18 +9,27 @@
         levels: @js($levels),
         current: {{ $current }},
         animated: 0,
-        init() {
+        intervalId: null,
+
+        startAnimation() {
+            this.animated = 0;
+            clearInterval(this.intervalId);
             let i = 1;
-            const interval = setInterval(() => {
+            this.intervalId = setInterval(() => {
                 if (i <= this.current) {
                     this.animated = i;
                     i++;
                 } else {
-                    clearInterval(interval);
+                    clearInterval(this.intervalId);
                 }
             }, 400);
+        },
+
+        init() {
+            this.startAnimation();
         }
     }"
+    @roadmap-changed.window="startAnimation()"
 >
     {{-- Icon --}}
     <div class="flex h-24 w-24 items-center justify-center">

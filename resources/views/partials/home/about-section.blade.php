@@ -1,4 +1,4 @@
-<div class="w-screen h-screen flex">
+<div class="w-screen flex">
     <div class="w-screen h-full bg-primary border-4 border-darker p-8">
         <div x-data="{ tab: 'skills' }" class="flex flex-col items-center justify-center h-full">
             <!-- Menu -->
@@ -80,25 +80,41 @@
                         <div class="bg-red-500 text-4xl font-fredoka font-bold flex justify-center p-4">
                             <h1><i class="fas fa-terminal"></i> SKILLS <i class="fas fa-code"></i></h1>
                         </div>
-                        <div class="bg-yellow-500 flex flex-row w-full">
-                            <div class="flex w-3/12 h-full bg-blue-500 flex-col">
-                                <div class="flex items-center justify-center w-36 h-36 bg-green-500 border">
-                                    <i class="fa-brands fa-php text-8xl text-[#777BB4]"></i>
-                                </div>
-                                <div class="flex items-center justify-center w-36 h-36 bg-green-500 border">
-                                    <i class="fa-brands fa-laravel text-8xl text-[#FF2D20]"></i>
-                                </div>
-                                <div class="flex items-center justify-center w-36 h-36 bg-green-500 border">
-                                    <i class="fa-brands fa-js text-8xl text-[#F7DF1E]"></i>
-                                </div>
-                                <div class="flex items-center justify-center w-36 h-36 bg-green-500 border">
-                                    <i class="fa-brands fa-react text-8xl text-[#61DAFB]"></i>
-                                </div>
+                        @php
+                            $roadmaps = [
+                                'php' => ['icon' => 'fa-php', 'color' => '#777BB4', 'current' => 3],
+                                'laravel' => ['icon' => 'fa-laravel', 'color' => '#FF2D20', 'current' => 4],
+                                'js' => ['icon' => 'fa-js', 'color' => '#F7DF1E', 'current' => 5],
+                                'react' => ['icon' => 'fa-react', 'color' => '#61DAFB', 'current' => 1],
+                            ];
+                        @endphp
+
+                        <div x-data="{ roadmap: 'php' }" class="bg-blue-500 flex flex-row w-full">
+
+                            {{-- Sidebar Icons --}}
+                            <div class="flex w-3/12 h-full bg-blue-500 flex-col justify-evenly items-center">
+                                @foreach ($roadmaps as $key => $rm)
+                                    <div @click="roadmap = '{{ $key }}'; $dispatch('roadmap-changed', { key: '{{ $key }}' })"
+                                        class="flex items-center justify-center w-38 h-38 bg-green-500 border cursor-pointer">
+                                        <i class="fa-brands {{ $rm['icon'] }} text-8xl"
+                                            style="color: {{ $rm['color'] }}"></i>
+                                    </div>
+                                @endforeach
                             </div>
-                            <div class="flex flex-col w-full h-full bg-primary p-4 border-2 border-darker rounded-xl m-4 gap-8">
-                                <x-progress-bar-card :current="3"></x-progress-bar-card>
-                                <x-progress-roadmap :current="3"></x-progress-roadmap>
+
+                            {{-- Content --}}
+                            <div
+                                class="flex flex-col w-full h-full bg-primary p-4 border-2 border-darker rounded-xl m-4">
+                                @foreach ($roadmaps as $key => $rm)
+                                    <div x-show="roadmap === '{{ $key }}'">
+                                        <div x-key="roadmap" class="flex flex-col gap-8">
+                                            <x-progress-bar-card :current="$rm['current']" />
+                                            <x-progress-roadmap :current="$rm['current']" />
+                                        </div>
+                                    </div>
+                                @endforeach
                             </div>
+
                         </div>
                     </div>
 

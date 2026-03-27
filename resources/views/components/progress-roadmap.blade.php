@@ -26,25 +26,32 @@
     class="flex flex-col w-full h-full border-2 border-darker rounded-lg"
     x-data="{
         checked: 0,
+        intervalId: null,
 
-        init() {
-            // Delay awal 800ms, lalu tiap 600ms centang satu level
+        startAnimation() {
+            this.checked = 0;
+            clearInterval(this.intervalId);
             setTimeout(() => {
-                const interval = setInterval(() => {
+                this.intervalId = setInterval(() => {
                     if (this.checked < {{ $current }}) {
                         this.checked++;
                     } else {
-                        clearInterval(interval);
+                        clearInterval(this.intervalId);
                     }
                 }, 600);
             }, 800);
+        },
+
+        init() {
+            this.startAnimation();
         }
     }"
+    @roadmap-changed.window="startAnimation()"  {{-- ← reset tiap tab berganti --}}
 >
 
     {{-- Header --}}
-    <div class="flex flex-row justify-between w-full p-4">
-        <span><i class="fas fa-seedling text-green-500"></i></span>
+    <div class="flex flex-row justify-between w-full p-4 border-b-2 border-darker">
+        <span><i class="fas fa-seedling text-green-500 text-lg"></i></span>
         <h1 class="font-quicksand font-bold text-main">Progress Roadmap</h1>
         <span class="font-quicksand text-sm text-main">{{ $current }}/{{ count($steps) }}</span>
     </div>
