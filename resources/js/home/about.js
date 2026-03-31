@@ -3,8 +3,8 @@ const el = document.querySelector("#mouseCircle");
 
 export function mouseHover() {
     // Posisi "default" saat mouse di luar
-    const DEFAULT_X = 148; // setara 9.25rem
-    const DEFAULT_Y = 380; // setara 23.75rem
+    const DEFAULT_X = 380; // setara 9.25rem
+    const DEFAULT_Y = 88; // setara 23.75rem
 
     let mouseX = DEFAULT_X;
     let mouseY = DEFAULT_Y;

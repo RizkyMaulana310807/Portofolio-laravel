@@ -1,5 +1,7 @@
-<div {{ $attributes }} class="card transform bg-bright text-main p-6 w-80 border-4 border-secondary relative hover:scale-105 transition-all duration-300 ease-out rounded-2xl
-">
+<div {{ $attributes->merge([
+    'class' => "transform bg-bright text-main p-6 w-80 border-4 border-secondary relative hover:scale-105 transition-all duration-300 ease-out rounded-2xl
+"
+]) }}>
 
     <!-- Header -->
     <div class="flex justify-between items-start mb-6">

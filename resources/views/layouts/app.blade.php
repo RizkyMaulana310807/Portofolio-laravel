@@ -21,6 +21,16 @@
             font-family: "Quicksand";
             src: url("{{ asset('fonts/Quicksand/QuicksandVariable.ttf') }}") format("truetype");
         }
+
+        #track::-webkit-scrollbar {
+            display: none;
+            /* Sembunyikan scrollbar di Chrome/Safari */
+        }
+
+        /* Pastikan setiap card tidak shrink */
+        #track>* {
+            flex-shrink: 0;
+        }
     </style>
 
     </@font-face>

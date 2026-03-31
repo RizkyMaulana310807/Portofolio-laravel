@@ -1,6 +1,6 @@
 <div class="w-screen flex">
     <div class="w-screen h-full bg-primary border-4 border-darker p-8">
-        <div x-data="{ tab: 'skills' }" class="flex flex-col items-center justify-center h-full">
+        <div x-data="{ tab: 'about' }" class="flex flex-col items-center justify-center h-full">
             <!-- Menu -->
             <div class="bg-primary inline-flex rounded-md border-4 border-darker">
 

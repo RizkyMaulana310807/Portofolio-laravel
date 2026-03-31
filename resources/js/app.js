@@ -3,9 +3,16 @@ import "animate.css";
 import Alpine from "alpinejs";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { initSloganAnimation, initRoleTitleAnimation, initCardObserver, initFloatingCards } from "./home/home";
+import {
+    initSloganAnimation,
+    initRoleTitleAnimation,
+    initCardObserver,
+    initFloatingCards,
+} from "./home/home";
 import { createTimeline } from "./home/timeline";
 import { mouseHover } from "./home/about";
+import { scroll } from "./home/projectsScroll";
+
 document.addEventListener("DOMContentLoaded", () => {
     initAOS();
     initSloganAnimation();
@@ -14,11 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
     initFloatingCards();
     createTimeline();
     mouseHover();
+    scroll();
 });
 
 window.Alpine = Alpine;
 Alpine.start();
-
 
 // ======================
 // AOS INIT
@@ -30,4 +37,3 @@ function initAOS() {
         startEvent: "DOMContentLoaded",
     });
 }
-
