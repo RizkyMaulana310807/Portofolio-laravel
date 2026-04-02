@@ -1,5 +1,5 @@
 <div class="w-screen h-screen flex items-center justify-center">
-    <div id="track" class="flex flex-row items-center overflow-x-scroll overflow-y-hidden" style="
+    <div id="track" class="flex flex-row items-center overflow-x-scroll overflow-y-hidden project-card" style="
             width: 100vw;
             height: 100%;
             flex-wrap: nowrap;

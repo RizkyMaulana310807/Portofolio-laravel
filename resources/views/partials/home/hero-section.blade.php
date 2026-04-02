@@ -21,8 +21,8 @@
         </div>
         <div class="w-1/2 h-full relative">
             <img src="{{ asset('images/programmer.webp') }}" loading="lazy">
-            <x-floating-card name="Laravel" class="none"></x-floating-card>
-            <x-floating-card name="Backend developer" class="none"></x-floating-card>
-            <x-floating-card name="#Codingholic" class="none"></x-floating-card>
+            <x-floating-card name="Laravel" class="top-10 left-10"></x-floating-card>
+            <x-floating-card name="Backend developer" class="top-10 left-10"></x-floating-card>
+            <x-floating-card name="#Codingholic" class="top-10 left-10"></x-floating-card>
         </div>
     </div>
