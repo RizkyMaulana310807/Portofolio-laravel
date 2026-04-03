@@ -89,11 +89,9 @@ export function scroll() {
     /**
      * Event hover menggunakan event delegation
      */
-    const card = document.querySelector(".project-card");
+    const card = document.querySelector(".project-card *");
     card.addEventListener("mouseover", (e) => {
         if (card && track.contains(card)) {
-            console.log(card);
-            console.log(track.contains(card));
             if (hoveredCard !== card) {
                 hoveredCard = card;
                 isPaused = true;
@@ -103,6 +101,10 @@ export function scroll() {
             hoveredCard = null;
             isPaused = false;
         }
+    });
+    card.addEventListener("mouseout", (e) => {
+        isPaused = false;
+        hoveredCard = null;
     });
 
     // Jalankan animasi

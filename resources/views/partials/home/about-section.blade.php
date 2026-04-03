@@ -1,14 +1,14 @@
 <div class="w-screen flex">
     <div class="w-screen h-full bg-primary border-4 border-darker p-8">
-        <div x-data="{ tab: 'about' }" class="flex flex-col items-center justify-center h-full">
+        <div x-data="{ tab: 'skills' }" class="flex flex-col items-center justify-center h-full">
             <!-- Menu -->
             <div class="bg-primary inline-flex rounded-md border-4 border-darker">
 
-                <button @click="tab = 'awards'"
+                <!-- <button @click="tab = 'awards'"
                     :class="tab === 'awards' ? 'bg-special/10 text-special' : 'text-main hover:bg-darker'"
                     class="px-6 py-3 transition font-bold">
                     AWARDS
-                </button>
+                </button> -->
 
                 <button @click="tab = 'about'"
                     :class="tab === 'about' ? 'bg-special/10 text-special' : 'text-main hover:bg-darker'"
@@ -28,9 +28,9 @@
             <!-- Content -->
             <div class="mt-6 h-full w-full">
 
-                <div x-show="tab === 'awards'">
+                <!-- <div x-show="tab === 'awards'">
                     Content awards
-                </div>
+                </div> -->
                 <!-- tab about -->
                 <div x-show="tab === 'about'" class="flex flex-row h-full w-full">
                     <div class="w-1/2 h-full flex p-6">
@@ -124,14 +124,14 @@
                         </div>
                     </div>
 
-                    <div class="bg-bright w-1/2 h-full">
+                    <div class="bg-bright flex w-1/2 h-full">
                         <div>
                             <h1>Sertification</h1>
                         </div>
                         <div>
-                            <h1>
+                            <x-sertificate-card>
 
-                            </h1>
+                            </x-sertificate-card>
                         </div>
                     </div>
 
