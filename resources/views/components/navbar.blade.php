@@ -21,15 +21,15 @@
 
             <div class="hidden md:flex space-x-6 pr-4">
                 <div
-                    class="icon w-12 h-12 p-2 bg-secondary flex items-center justify-center rounded-full border-3 border-transparent hover:border-main hover:bg-main transition-all duration-250 ease-in-out group">
+                    class="icon w-12 h-12 p-2 bg-secondary flex items-center justify-center rounded-full border-3 border-transparent hover:border-main hover:bg-main transition-all duration-250 ease-in-out group cursor-pointer">
                     <i class="fa-brands fa-linkedin text-main text-2xl group-hover:text-bright"></i>
                 </div>
                 <div
-                    class="icon w-12 h-12 p-2 bg-secondary flex items-center justify-center rounded-full border-3 border-transparent hover:border-main hover:bg-main transition-all duration-250 ease-in-out group">
+                    class="icon w-12 h-12 p-2 bg-secondary flex items-center justify-center rounded-full border-3 border-transparent hover:border-main hover:bg-main transition-all duration-250 ease-in-out group cursor-pointer">
                     <i class="fa-brands fa-github fa-2xl group-hover:text-bright"></i>
                 </div>
                 <div
-                    class="icon w-12 h-12 p-2 bg-secondary flex items-center justify-center rounded-full border-3 border-transparent hover:border-main hover:bg-main transition-all duration-250 ease-in-out group">
+                    class="icon w-12 h-12 p-2 bg-secondary flex items-center justify-center rounded-full border-3 border-transparent hover:border-main hover:bg-main transition-all duration-250 ease-in-out group cursor-pointer">
                     <i class="fas fa-envelope fa-xl group-hover:text-bright"></i>
                 </div>
             </div>
