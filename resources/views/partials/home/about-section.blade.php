@@ -1,6 +1,6 @@
 <div class="w-screen flex">
     <div class="w-screen h-full bg-primary border-4 border-darker p-8">
-        <div x-data="{ tab: 'skills' }" class="flex flex-col items-center justify-center h-full">
+        <div x-data="{ tab: 'about' }" class="flex flex-col items-center justify-center h-full">
             <!-- Menu -->
             <div class="bg-primary inline-flex rounded-md border-4 border-darker">
 
@@ -49,7 +49,7 @@
                     </div>
 
                     <div
-                        class="w-1/2 h-full flex flex-col justify-evenly items-center p-6 bg-bright rounded-2xl shadow-2xl relative">
+                        class="w-1/2 h-full flex flex-col justify-evenly items-center p-6 bg-bright rounded-2xl shadow-2xl relative gap-8">
 
                         <div class="w-36 h-36 rounded-full bg-accent absolute z-10 left-95 top-37 -translate-x-1/2 -translate-y-1/2 transition-all duration-300 ease-out"
                             id="mouseCircle"></div>
@@ -72,6 +72,31 @@
                                 berbasis laravel (website) dan aplikasi berbasis react native (mobile) selama kurang
                                 lebih 6 bulan.</p>
                         </div>
+                        <div class="flex w-full flex-col gap-4">
+                            @php
+                                $skills_container = [
+                                    'php' => ['icon' => 'fa-php', 'color' => '#777BB4'],
+                                    'laravel' => ['icon' => 'fa-laravel', 'color' => '#FF2D20'],
+                                    'js' => ['icon' => 'fa-js', 'color' => '#F7DF1E'],
+                                    'react' => ['icon' => 'fa-react', 'color' => '#61DAFB'],
+                                ];
+                            @endphp
+
+                            <div class="flex">
+                                <h1 class="font-fredoka font-bold text-2xl underline underline-main text-main">SKILLS
+                                </h1>
+                            </div>
+
+                            <div class="flex gap-6 justify-center items-center">
+                                @foreach ($skills_container as $key => $sk)
+                                    <div class="bg-white border border-main/5 p-4 hover:border-main/20 cursor-pointer transition-all duration-200 ease-in-out z-90">
+                                        <i class="fa-brands {{ $sk['icon'] }} text-6xl"
+                                            style="color: {{ $sk['color'] }}"></i>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
@@ -90,22 +115,23 @@
                             ];
                         @endphp
 
+
                         <div x-data="{ roadmap: 'php' }"
                             class="bg-primary border-4 border-darker rounded-lg flex flex-row w-full">
 
                             {{-- Sidebar Icons --}}
                             <div class="flex w-3/12 h-full flex-col justify-evenly items-center">
                                 @foreach ($roadmaps as $key => $rm)
-                                                    <div @click="roadmap = '{{ $key }}'; $dispatch('roadmap-changed', { key: '{{ $key }}' })"
-                                                        :class="roadmap === '{{ $key }}'
-                                                        ? 'border-main bg-secondary scale-105'
-                                                        : 'border-darker hover:bg-white'"
-                                                        class="flex items-center justify-center w-38 h-38 border-4 cursor-pointer transition-all duration-200 ease-in-out">
-                                                        <i class="fa-brands {{ $rm['icon'] }} text-8xl transition-all duration-200"
-                                                            :class="roadmap === '{{ $key }}' ? 'drop-shadow-lg' : 'opacity-50'"
-                                                            style="color: {{ $rm['color'] }}">
-                                                        </i>
-                                                    </div>
+                                    <div @click="roadmap = '{{ $key }}'; $dispatch('roadmap-changed', { key: '{{ $key }}' })"
+                                        :class="roadmap === '{{ $key }}'
+                                                                            ? 'border-main bg-secondary scale-105'
+                                                                            : 'border-darker hover:bg-white'"
+                                        class="flex items-center justify-center w-38 h-38 border-4 cursor-pointer transition-all duration-200 ease-in-out">
+                                        <i class="fa-brands {{ $rm['icon'] }} text-8xl transition-all duration-200"
+                                            :class="roadmap === '{{ $key }}' ? 'drop-shadow-lg' : 'opacity-50'"
+                                            style="color: {{ $rm['color'] }}">
+                                        </i>
+                                    </div>
                                 @endforeach
                             </div>
                             {{-- Content --}}
