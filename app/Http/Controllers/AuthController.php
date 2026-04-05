@@ -1,0 +1,43 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
+class AuthController extends Controller
+{
+    public function showLogin()
+    {
+        return view('auth'); // view lo tadi
+    }
+
+    public function login(Request $request)
+    {
+        $credentials = $request->only('email', 'password');
+
+        // Batasi cuma admin (email lo)
+        if ($request->email !== 'rizkymaulana317b@gmail.com') {
+            return back()->withErrors([
+                'email' => 'Unauthorized'
+            ]);
+        }
+
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+            return redirect('/'); // ke dashboard
+        }
+
+        return back()->withErrors([
+            'email' => 'Email atau password salah'
+        ]);
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect('/login');
+    }
+}
