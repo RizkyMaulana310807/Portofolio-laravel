@@ -19,7 +19,7 @@ Route::get('/test-email', function () {
 
 Route::get('/', function () {
     return view('home');
-})->middleware('auth');
+});
 
 Route::get('/auth', function () {
     return view('auth');
