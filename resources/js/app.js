@@ -12,6 +12,9 @@ import {
 import { createTimeline } from "./home/timeline";
 import { mouseHover } from "./home/about";
 import { scroll } from "./home/projectsScroll";
+import { createIcons, icons } from "lucide";
+
+createIcons({ icons });
 
 document.addEventListener("DOMContentLoaded", () => {
     initAOS();
