@@ -71,8 +71,9 @@
         </div>
 
         <!-- something -->
-        <div class="bg-bright w-1/2 flex rounded-2xl">
-
+        <div class="bg-bright w-1/2 flex flex-col rounded-2xl">
+            <h1 class="flex flex-row gap-2 text-medium font-quicksand font-bold items-center p-4 border-b border-main">
+                Most Liked Project <i data-lucide="sparkle"></i></h1>
         </div>
     </div>
 
@@ -102,26 +103,27 @@
                         @foreach ($logs as $log)
                             <tr class="bg-bright shadow-sm rounded-lg">
                                 <td class="p-4">{{ $log['id'] }}</td>
-                                <td class="p-4">{{ $log['ip'] }}</td>
-                                <td class="p-4">{{ $log['url'] }}</td>
-                                <td class="p-4">{{ $log['method'] }}</td>
-                                <td class="p-4">{{ $log['agent'] }}</td>
+                                <td class="p-4">{{ $log['ip_address'] }}</td>
+                                <td class="p-4">{{ $log['url_accessed'] }}</td>
+                                <td class="p-4">{{ $log['http_method'] }}</td>
+                                <td class="p-4">{{ $log['user_agent'] }}</td>
                                 <td class="p-4">
                                     {{ $log['is_bot'] ? 'True' : 'False' }}
                                 </td>
                                 <td class="p-4">
-                                    <span class="px-4 py-2 rounded-full font-bold
-                                        {{ $log['severity'] === 'CRITICAL' ? 'bg-cinnabar/45 text-cinnabar' : '' }}">
-                                        {{ $log['severity'] }}
+                                    <span
+                                        class="px-4 py-2 rounded-full font-bold
+                                                {{ $log['severity_level'] === 'CRITICAL' ? 'bg-cinnabar/45 text-cinnabar' : '' }}">
+                                        {{ $log['severity_level'] }}
                                     </span>
                                 </td>
-                                <td class="p-4">{{ $log['timestamp'] }}</td>
+                                <td class="p-4">{{ $log['created_at'] }}</td>
                             </tr>
                         @endforeach
                     @else
-                    <tr>
-                        <th>No Data avaliable</th>
-                    </tr>
+                        <tr>
+                            <th>No Data avaliable</th>
+                        </tr>
                     @endif
                 </tbody>
             </table>
