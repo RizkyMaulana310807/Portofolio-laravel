@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\admin\AdminController;
 
 
 Route::get('/login', [AuthController::class, 'showLogin']);
@@ -25,3 +26,4 @@ Route::get('/auth', function () {
     return view('auth');
 });
 
+Route::get('/dashboard', [AdminController::class, 'showDashboard']);

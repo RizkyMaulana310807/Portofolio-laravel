@@ -4,7 +4,7 @@
 
 @include('components.navbar')
 
-@section(section: 'content')
+@section('content')
 
     @include('partials.home.hero-section')
     @include('partials.home.projects-section')
