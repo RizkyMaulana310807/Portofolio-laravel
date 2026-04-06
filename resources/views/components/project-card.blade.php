@@ -43,12 +43,24 @@
     <!-- Play Button -->
     <div class="absolute bottom-[-20px] left-6">
         <div
-            class="bg-special text-bright w-12 h-12 flex items-center justify-center rounded-full hover:w-24 hover:rounded-full hover:px-4 hover:justify-evenly transition-all duration-200 ease-in-out group">
+            class="bg-special text-bright w-12 h-12 flex items-center justify-center rounded-full gap-2 hover:w-24 hover:rounded-full hover:px-4 hover:justify-evenly cursor-pointer transition-all duration-200 ease-in-out group">
             <i class="fa-solid fa-play"></i>
-            <span class="hidden group-hover:block transition-all duration-200 ease-in-out">
+            <span class="hidden group-hover:block font-quicksand font-bold transition-all duration-200 ease-in-out">
                 {{ $playable ? 'Play' : 'Check' }}
             </span>
         </div>
     </div>
+    <!-- likebutton -->
+    <div class="absolute bottom-[-20px] right-6">
+        <div
+            class="bg-special text-bright gap-2 w-12 h-12 flex items-center justify-center rounded-full border-2 border-transparent hover:border-accent hover:bg-bright hover:w-24 cursor-pointer transition-all duration-200 ease-in-out group">
+            <i data-lucide="thumbs-up" class="text-bright group-hover:text-accent"></i>
+            <span class="hidden group-hover:block text-accent font-quicksand font-bold transition-all duration-200 ease-in-out">
+                200
+            </span>
+
+        </div>
+    </div>
+
 
 </div>
