@@ -31,23 +31,23 @@ export function createTimeline() {
 
             el.innerHTML = `
             <!-- ITEM -->
-            <div class="flex items-center bg-bright justify-between p-4 shadow">
+            <div class="flex items-center bg-bright justify-between p-2 xl:p-4 shadow">
                 
                 <!-- icon -->
                 <span>
-                    <i class="fa-solid fa-book text-gray fa-xl"></i>
+                    <i class="fa-solid fa-book text-gray text-base xl:text-xl"></i>
                 </span>
 
                 <!-- content -->
                 <div class="flex flex-col ml-4 flex-1">
-                    <span class="text-lg font-quicksand font-semibold">${item.school}</span>
-                    <span class="text-xs font-quicksand text-gray">${
+                    <span class="text-base xl:text-lg font-quicksand font-semibold">${item.school}</span>
+                    <span class="text-xs xl:text-base font-quicksand text-gray">${
                         item.description
                     }</span>
                 </div>
 
                 <!-- tanggal -->
-                <span class="text-gray text-sm font-quicksand">
+                <span class="text-gray text-xs xl:text-sm font-quicksand">
                     ${item.start} - ${item.end}
                 </span>
             </div>

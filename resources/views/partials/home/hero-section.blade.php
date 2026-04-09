@@ -1,5 +1,5 @@
-    <div class="w-screen h-screen flex flex-col xl:flex-row border-b-4 border-secondary bg-red-500">
-        <div class="w-full xl:w-1/2 h-full bg-yellow-500 flex items-center justify-normal xl:justify-center">
+    <div class="w-screen h-screen flex flex-col xl:flex-row border-b-4 border-secondary">
+        <div class="w-full xl:w-1/2 h-full flex items-center justify-normal xl:justify-center">
             <div class="max-w-xs text-left p-8 space-y-4">
                 <div class="inline-flex flex-col font-bold">
                     <p class="text-sm xl:text-baserole-title text-special border-b xl:border-b-4 border-main rounded-sm font-quicksand">BACKEND
@@ -19,7 +19,7 @@
                 </a>
             </div>
         </div>
-        <div class="w-full xl:w-1/2 h-full relative bg-blue-500">
+        <div class="w-full xl:w-1/2 h-full relative">
             <img src="{{ asset('images/programmer.webp') }}" loading="lazy">
             <x-floating-card name="Laravel" class="top-[70px] left-[0vw]"></x-floating-card>
             <x-floating-card name="Backend developer" class="top-[20px] left-[30vw]"></x-floating-card>

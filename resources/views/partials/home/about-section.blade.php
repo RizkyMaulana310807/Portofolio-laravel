@@ -1,5 +1,5 @@
 <div class="w-screen flex">
-    <div class="w-screen h-full bg-primary border-4 border-darker p-8">
+    <div class="w-screen h-full bg-primary border-4 border-darker p-4 xl:p-8">
         <div x-data="{ tab: 'about' }" class="flex flex-col items-center justify-center h-full">
             <!-- Menu -->
             <div class="bg-primary inline-flex rounded-md border-4 border-darker">
@@ -22,7 +22,6 @@
                     SKILLS
                 </button>
  -->
-
             </div>
 
             <!-- Content -->
@@ -32,24 +31,24 @@
                     Content awards
                 </div> -->
                 <!-- tab about -->
-                <div x-show="tab === 'about'" class="flex flex-col xl:flex-row h-full w-full">
-                    <div class="w-1/2 h-full flex p-6">
+                <div x-show="tab === 'about'" class="flex flex-col xl:flex-row h-full w-full gap-6 xl:gap-0">
+                    <div class="w-full xl:w-1/2 h-full flex p-2 xl:p-6">
                         <div class="w-full space-y-2 bg-bright p-4 rounded-2xl shadow-xl">
                             <div class="flex flex-row justify-between w-full items-center">
-                                <span class="font-quicksand bg-bright rounded-full p-2 font-bold">Riwayat
+                                <span class="font-quicksand bg-bright rounded-full p-2 font-bold text-xs xl:text-base">Riwayat
                                     Pendidikan</span>
                                 <span
-                                    class="font-quicksand bg-special/90 rounded-full px-2 py-1 font-bold text-bright">On
+                                    class="font-quicksand bg-special/90 rounded-full text-xs xl:text-base px-2 py-1 font-bold text-bright">On
                                     Going</span>
                             </div>
-                            <div id="timelineRiwayatPendidikan" class="max-w-2xl mx-auto">
+                            <div id="timelineRiwayatPendidikan" class="w-full xl:w-2xl mx-auto">
 
                             </div>
                         </div>
                     </div>
 
                     <div
-                        class="w-1/2 h-full flex flex-col justify-evenly items-center p-6 bg-bright rounded-2xl shadow-2xl relative gap-8">
+                        class="w-full xl:w-1/2 h-full flex flex-col justify-evenly items-center p-6 bg-bright rounded-2xl shadow-2xl relative gap-8">
 
                         <div class="w-12 h-12 xl:w-36 xl:h-36 rounded-full bg-accent absolute z-10 hidden xl:left-95 xl:top-37 -translate-x-1/2 -translate-y-1/2 transition-all duration-300 ease-out"
                             id="mouseCircle"></div>
@@ -64,7 +63,7 @@
                                 class="h-18 xl:h-32 rounded-full border-4 border-darker z-20">
                         </div>
                         <div class="flex">
-                            <p class="font-quicksand font-semibold z-20">Hai! Saya Rizky,
+                            <p class="text-xs xl:text-base font-quicksand font-semibold z-20">Hai! Saya Rizky,
                                 Seorang pengembang yang berfokus pada arsitektur logika, baik untuk web, mobile, maupun
                                 game. Dengan pengalaman komersial di Laravel (PHP) dan React Native (EAS Build), saya
                                 membangun
@@ -83,14 +82,14 @@
                             @endphp
 
                             <div class="flex">
-                                <h1 class="font-fredoka font-bold text-2xl underline underline-main text-main">SKILLS
+                                <h1 class="font-fredoka font-bold text-base xl:text-2xl underline underline-main text-main">SKILLS
                                 </h1>
                             </div>
 
                             <div class="flex gap-6 justify-center items-center">
                                 @foreach ($skills_container as $key => $sk)
                                     <div class="bg-white border border-main/5 p-4 hover:border-main/20 cursor-pointer transition-all duration-200 ease-in-out z-90">
-                                        <i class="fa-brands {{ $sk['icon'] }} text-2xl xl:text-6xl"
+                                        <i class="fa-brands {{ $sk['icon'] }} text-xl xl:text-6xl"
                                             style="color: {{ $sk['color'] }}"></i>
                                     </div>
                                 @endforeach
