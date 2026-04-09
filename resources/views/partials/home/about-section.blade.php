@@ -41,7 +41,7 @@
                                     class="font-quicksand bg-special/90 rounded-full text-xs xl:text-base px-2 py-1 font-bold text-bright">On
                                     Going</span>
                             </div>
-                            <div id="timelineRiwayatPendidikan" class="w-full xl:w-2xl mx-auto">
+                            <div id="timelineRiwayatPendidikan" class="w-full mx-auto">
 
                             </div>
                         </div>

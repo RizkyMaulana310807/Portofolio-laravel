@@ -18,13 +18,13 @@
 
         <div class="border-b-4 border-darker bg-red-500"></div>
 
-        <div class="flex flex-col justify-start gap-4 xl:gap-8 w-full">
-            <div>
+        <div class="flex flex-col xl:flex-row justify-start gap-4 xl:gap-2 w-full">
+            <div class="xl:w-1/3">
                 <h1 class="font-bold">Rizky Maulana</h1>
             </div>
-            <div class="flex flex-row gap-6 xl:gap-10 w-full">
+            <div class="flex flex-row gap-6 xl:gap-2 w-full">
                 <div class="space-y-1 xl:space-y-2 flex flex-col w-full">
-                    <h1 class="font-bold text-xs xl:text-base">Navigations</h1>
+                    <h1 class="font-bold text-xs xl:text-lg">Navigations</h1>
                     <a href="#"
                         class="text-xs xl:text-base underline underline-offset-4 decoration-dotted hover:text-blue-500 transition-all duration-200 ease-in-out">About</a>
                     <a href="#"
@@ -33,7 +33,7 @@
                         class="text-xs xl:text-base underline underline-offset-4 decoration-dotted hover:text-blue-500 transition-all duration-200 ease-in-out">CV</a>
                 </div>
                 <div class="space-y-1 xl:space-y-2 flex flex-col w-full">
-                    <h1 class="font-bold text-xs xl:text-base">Tech Focus</h1>
+                    <h1 class="font-bold text-xs xl:text-lg">Tech Focus</h1>
                     <a href="#"
                         class="text-xs xl:text-base underline underline-offset-4 decoration-dotted hover:text-blue-500 transition-all duration-200 ease-in-out">Laravel/PHP</a>
                     <a href="#"
@@ -49,7 +49,7 @@
 
                 </div>
                 <div class="space-y-1 xl:space-y-2 flex flex-col w-full">
-                    <h1 class="font-bold text-xs xl:text-base">Let's Connect</h1>
+                    <h1 class="font-bold text-xs xl:text-lg">Let's Connect</h1>
                     <a href="#"
                         class="text-xs xl:text-base underline underline-offset-4 decoration-dotted hover:text-blue-500 transition-all duration-200 ease-in-out group">
                         Linkedin <i class="fa-brands fa-linkedin text-main text-xs xl:text-2xl group-hover:text-blue-500"></i>
