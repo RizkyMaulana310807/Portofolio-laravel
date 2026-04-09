@@ -16,12 +16,12 @@
                     ABOUT
                 </button>
 
-                <button @click="tab = 'skills'"
+                <!-- <button @click="tab = 'skills'"
                     :class="tab === 'skills' ? 'bg-special/10 text-special' : 'text-main hover:bg-darker'"
                     class="px-6 py-3 transition font-bold">
                     SKILLS
                 </button>
-
+ -->
 
             </div>
 
@@ -32,7 +32,7 @@
                     Content awards
                 </div> -->
                 <!-- tab about -->
-                <div x-show="tab === 'about'" class="flex flex-row h-full w-full">
+                <div x-show="tab === 'about'" class="flex flex-col xl:flex-row h-full w-full">
                     <div class="w-1/2 h-full flex p-6">
                         <div class="w-full space-y-2 bg-bright p-4 rounded-2xl shadow-xl">
                             <div class="flex flex-row justify-between w-full items-center">
@@ -51,17 +51,17 @@
                     <div
                         class="w-1/2 h-full flex flex-col justify-evenly items-center p-6 bg-bright rounded-2xl shadow-2xl relative gap-8">
 
-                        <div class="w-36 h-36 rounded-full bg-accent absolute z-10 left-95 top-37 -translate-x-1/2 -translate-y-1/2 transition-all duration-300 ease-out"
+                        <div class="w-12 h-12 xl:w-36 xl:h-36 rounded-full bg-accent absolute z-10 hidden xl:left-95 xl:top-37 -translate-x-1/2 -translate-y-1/2 transition-all duration-300 ease-out"
                             id="mouseCircle"></div>
 
                         <div class="w-full h-full absolute bg-red-500/0 z-50 rounded-2xl" id="mouseMovementArea"></div>
 
                         <div class="flex items-start w-full space-x-14">
-                            <h1 class="text-6xl font-fredoka font-semibold z-20">
+                            <h1 class="text-2xl xl:text-6xl font-fredoka font-semibold z-20">
                                 Rizky<br>Maulana
                             </h1>
                             <img src="https://i.pinimg.com/736x/a2/22/cf/a222cfa4df0596e6a490b96a06561cd1.jpg" alt="pfp"
-                                class="h-32 rounded-full border-4 border-darker z-20">
+                                class="h-18 xl:h-32 rounded-full border-4 border-darker z-20">
                         </div>
                         <div class="flex">
                             <p class="font-quicksand font-semibold z-20">Hai! Saya Rizky,
@@ -90,7 +90,7 @@
                             <div class="flex gap-6 justify-center items-center">
                                 @foreach ($skills_container as $key => $sk)
                                     <div class="bg-white border border-main/5 p-4 hover:border-main/20 cursor-pointer transition-all duration-200 ease-in-out z-90">
-                                        <i class="fa-brands {{ $sk['icon'] }} text-6xl"
+                                        <i class="fa-brands {{ $sk['icon'] }} text-2xl xl:text-6xl"
                                             style="color: {{ $sk['color'] }}"></i>
                                     </div>
                                 @endforeach
@@ -100,7 +100,7 @@
                     </div>
                 </div>
 
-                <div x-show="tab === 'skills'" class="flex flex-row h-full w-full bg-yellow-500">
+                <!-- <div x-show="tab === 'skills'" class="flex flex-row h-full w-full bg-yellow-500">
                     <div class="bg-primary w-1/2">
                         <div
                             class="bg-primary text-4xl font-fredoka font-bold flex justify-center p-4 border-4 rounded-lg border-darker">
@@ -162,7 +162,7 @@
                     </div>
 
                 </div>
-
+ -->
             </div>
 
         </div>

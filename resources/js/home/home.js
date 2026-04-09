@@ -1,6 +1,5 @@
 import { animate, splitText, stagger } from "animejs";
 
-
 // ======================
 // SLOGAN ANIMATION
 // ======================
@@ -21,7 +20,6 @@ export function initSloganAnimation() {
         loop: true,
     });
 }
-
 
 // ======================
 // ROLE TITLE ANIMATION
@@ -52,37 +50,38 @@ export function initRoleTitleAnimation() {
     });
 }
 
-
 // ======================
 // CARD INTERSECTION ANIMATION
 // ======================
 export function initCardObserver() {
     const cards = document.querySelectorAll(".card");
 
-    const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach((entry) => {
-            if (!entry.isIntersecting) return;
+    const observer = new IntersectionObserver(
+        (entries, obs) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
 
-            const index = [...cards].indexOf(entry.target);
+                const index = [...cards].indexOf(entry.target);
 
-            animate(entry.target, {
-                opacity: [0, 1],
-                translateY: [60, 0],
-                scale: [0.9, 1],
-                duration: 900,
-                delay: index * 150,
-                easing: "easeOutExpo",
+                animate(entry.target, {
+                    opacity: [0, 1],
+                    translateY: [60, 0],
+                    scale: [0.9, 1],
+                    duration: 900,
+                    delay: index * 150,
+                    easing: "easeOutExpo",
+                });
+
+                obs.unobserve(entry.target);
             });
+        },
+        {
+            threshold: 0.2,
+        }
+    );
 
-            obs.unobserve(entry.target);
-        });
-    }, {
-        threshold: 0.2,
-    });
-
-    cards.forEach(card => observer.observe(card));
+    cards.forEach((card) => observer.observe(card));
 }
-
 
 // ======================
 // FLOATING CARDS (INITIAL + SCROLL)
@@ -91,9 +90,9 @@ export function initFloatingCards() {
     const floatingCards = document.querySelectorAll(".floating-card");
 
     const config = [
-        { x: 65, y: 225, rotate: -10 },
-        { x: 380, y: 150, rotate: -3 },
-        { x: 100, y: 50, rotate: -25 },
+        { x: 0, y: 70, rotate: -10 },
+        { x: 20, y: 20, rotate: -3 },
+        { x: 10, y: 5, rotate: -25 },
     ];
 
     // initial animation
@@ -120,10 +119,10 @@ export function initFloatingCards() {
             const speed = 0.1 + index * 0.05;
 
             card.style.transform = `
-                translateX(${c.x}px)
-                translateY(${c.y - scrollY * speed}px)
-                rotate(${c.rotate}deg)
-            `;
+            translateX(${c.x}px)
+            translateY(${c.y - scrollY * speed}px)
+            rotate(${c.rotate}deg)
+        `;
         });
     });
 }

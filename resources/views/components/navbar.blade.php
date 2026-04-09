@@ -10,7 +10,7 @@
             </div>
 
             <!-- Menu Desktop -->
-            <div class="hidden md:flex space-x-6">
+            <div class="hidden lg:flex space-x-6">
                 <a href="/"
                     class="font-quicksand font-bold hover:underline hover:underline-offset-4 text-md transition duration-200 ease-in-out">WORKS</a>
                 <a href="/about"
