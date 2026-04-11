@@ -1,4 +1,7 @@
-<div class="w-screen h-screen flex items-center justify-center">
+<div class="w-screen h-screen flex flex-col items-center justify-center">
+    <div class="w-full p-2 xl:p-8">
+        <h1 class="font-fredoka text-2xl xl:text-4xl font-bold text-main">My Favorite Projects</h1>
+    </div>
     <div id="track" class="flex flex-row items-center overflow-x-scroll overflow-y-hidden project-card" style="
             width: 100vw;
             height: 100%;

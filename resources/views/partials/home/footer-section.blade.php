@@ -3,7 +3,7 @@
         class="w-screen h-full bg-primary mx-6 xl:mx-16 p-4 xl:p-8 rounded-2xl space-y-4 xl:space-y-16 border-4 border-darker">
 
         <div class="flex flex-row justify-between w-full">
-            <h1 class="sm:text-xs text-base w-full">Rizky Maulana</h1>
+            <h1 class="sm:text-xs text-base w-full font-quicksand">Rizky Maulana</h1>
             <h3 class="text-xs w-full">FULLSTACK DEVELOPER / PROBLEM SOLVER</h3>
         </div>
 
