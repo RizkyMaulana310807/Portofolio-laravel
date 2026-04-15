@@ -5,12 +5,12 @@ use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\admin\AdminController;
 
-
+// route login
 Route::get('/login', [AuthController::class, 'showLogin']);
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout']);
 
-
+// route tes kirim email
 Route::get('/test-email', function () {
     Mail::raw("ini email test dari Laravel", function ($mesasage) {
         $mesasage->to('rizkymaulana317b@gmail.com')->subject('test email');
@@ -22,8 +22,5 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/auth', function () {
-    return view('auth');
-});
-
+// route dashboard admin only
 Route::get('/dashboard', [AdminController::class, 'showDashboard']);
