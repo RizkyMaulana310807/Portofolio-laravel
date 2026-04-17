@@ -34,9 +34,14 @@
                 Dashboard
             </a>
             <a href="#" class="block px-3 py-2 rounded hover:bg-primary">
-                Users
+                CMS
             </a>
+            <a href="#" class="block px-3 py-2 rounded hover:bg-primary">
+                Resource
+            </a>
+
         </nav>
+        
     </aside>
 
     <!-- HEADER -->
