@@ -1,22 +1,23 @@
 @section('header', 'Content Management System')
-<div class="bg-red-500 flex w-full h-full flex-col">
+<div class=" flex w-full h-full flex-col">
     <div>
-        <h1>
+        <h1 class="text-2xl font-fredoka font-bold">
             Content Management System {CMS}
         </h1>
     </div>
 
     {{-- search box --}}
-    <div class="bg-blue-500 flex w-full h-24 justify-center">
-        <div class="flex flex-row items-center bg-yellow-500 gap-6 px-8">
-            <input class="bg-white px-6 py-3 rounded-full" type="text" placeholder="Search by text ...">
-            <div class="bg-green-500 aspect-square w-14 flex items-center justify-center rounded-full cursor-pointer">
+    <div class="bg-secondary flex w-full h-24 justify-center">
+        <div class="flex flex-row items-center gap-6 px-8">
+            <input class="bg-white px-6 py-3 rounded-full placeholder:font-quicksand" type="text"
+                placeholder="Search by text ...">
+            <div class=" aspect-square w-14 flex items-center justify-center rounded-full cursor-pointer">
                 <i data-lucide="search" class=""></i>
             </div>
         </div>
     </div>
     {{-- content --}}
-    <div class="bg-purple-500 grid grid-cols-3 w-full h-full items-start p-4 gap-2">
+    <div class=" grid grid-cols-3 w-full h-full items-start p-4 gap-4">
         <x-cms-card></x-cms-card>
         <x-cms-card></x-cms-card>
         <x-cms-card></x-cms-card>
@@ -24,3 +25,15 @@
         <x-cms-card></x-cms-card>
     </div>
 </div>
+
+{{-- script untuk textarea --}}
+<script>
+    const textareas = document.querySelectorAll('.auto-textarea');
+
+    textareas.forEach(textarea => {
+        textarea.addEventListener('input', function() {
+            this.style.height = 'auto';
+            this.style.height = this.scrollHeight + 'px';
+        });
+    });
+</script>
