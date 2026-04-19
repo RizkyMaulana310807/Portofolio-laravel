@@ -7,16 +7,16 @@
     </div>
 
     {{-- search box --}}
-    <div class="bg-blue-500 flex w-full h-24">
+    <div class="bg-blue-500 flex w-full h-24 justify-center">
         <div class="flex flex-row items-center bg-yellow-500 gap-6 px-8">
-            <input class="bg-white px-6 py-4 rounded-full" type="text" placeholder="Search by text ...">
-            <div class="bg-green-500 aspect-square w-14 flex items-center justify-center rounded-full">
+            <input class="bg-white px-6 py-3 rounded-full" type="text" placeholder="Search by text ...">
+            <div class="bg-green-500 aspect-square w-14 flex items-center justify-center rounded-full cursor-pointer">
                 <i data-lucide="search" class=""></i>
             </div>
         </div>
     </div>
     {{-- content --}}
     <div class="bg-purple-500 flex w-full h-full">
-
+        <x-cms-card></x-cms-card>
     </div>
 </div>
