@@ -16,7 +16,11 @@
         </div>
     </div>
     {{-- content --}}
-    <div class="bg-purple-500 flex w-full h-full">
+    <div class="bg-purple-500 grid grid-cols-3 w-full h-full items-start p-4 gap-2">
+        <x-cms-card></x-cms-card>
+        <x-cms-card></x-cms-card>
+        <x-cms-card></x-cms-card>
+        <x-cms-card></x-cms-card>
         <x-cms-card></x-cms-card>
     </div>
 </div>
