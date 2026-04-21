@@ -100,30 +100,30 @@
 
                 <tbody>
                     @if (count($logs) > 0)
-                        @foreach ($logs as $log)
-                            <tr class="bg-bright shadow-sm rounded-lg">
-                                <td class="p-4">{{ $log['id'] }}</td>
-                                <td class="p-4">{{ $log['ip_address'] }}</td>
-                                <td class="p-4">{{ $log['url_accessed'] }}</td>
-                                <td class="p-4">{{ $log['http_method'] }}</td>
-                                <td class="p-4">{{ $log['user_agent'] }}</td>
-                                <td class="p-4">
-                                    {{ $log['is_bot'] ? 'True' : 'False' }}
-                                </td>
-                                <td class="p-4">
-                                    <span
-                                        class="px-4 py-2 rounded-full font-bold
+                    @foreach ($logs as $log)
+                    <tr class="bg-bright shadow-sm rounded-lg">
+                        <td class="p-4">{{ $log['id'] }}</td>
+                        <td class="p-4">{{ $log['ip_address'] }}</td>
+                        <td class="p-4">{{ $log['url_accessed'] }}</td>
+                        <td class="p-4">{{ $log['http_method'] }}</td>
+                        <td class="p-4">{{ $log['user_agent'] }}</td>
+                        <td class="p-4">
+                            {{ $log['is_bot'] ? 'True' : 'False' }}
+                        </td>
+                        <td class="p-4">
+                            <span
+                                class="px-4 py-2 rounded-full font-bold
                                                 {{ $log['severity_level'] === 'CRITICAL' ? 'bg-cinnabar/45 text-cinnabar' : '' }}">
-                                        {{ $log['severity_level'] }}
-                                    </span>
-                                </td>
-                                <td class="p-4">{{ $log['created_at'] }}</td>
-                            </tr>
-                        @endforeach
+                                {{ $log['severity_level'] }}
+                            </span>
+                        </td>
+                        <td class="p-4">{{ $log['created_at'] }}</td>
+                    </tr>
+                    @endforeach
                     @else
-                        <tr>
-                            <th>No Data avaliable</th>
-                        </tr>
+                    <tr>
+                        <th>No Data avaliable</th>
+                    </tr>
                     @endif
                 </tbody>
             </table>
