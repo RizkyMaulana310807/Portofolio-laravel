@@ -2,15 +2,19 @@
 
 @section('title', 'Dashboard')
 
-@if (isset($success))
+@if (session('success'))
     <x-alert type="success">
-        {{ $success }}
+        {{ session('success') }}
     </x-alert>
 @endif
 
 
 @section('content')
-    {{-- @include('partials.dashboard.analytics-overview') --}}
-    {{-- @include('partials.dashboard.content-management-system') --}}
-    @include('partials.dashboard.resource-manager')
+    @if ($page == 'main')
+        @include('partials.dashboard.analytics-overview')
+    @elseif ($page == 'cms')
+        @include('partials.dashboard.content-management-system')
+    @elseif ($page == 'resource')
+        @include('partials.dashboard.resource-manager')
+    @endif
 @endsection

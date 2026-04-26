@@ -23,26 +23,7 @@
 
 <body class="bg-primary text-main">
 
-    <!-- SIDEBAR -->
-    <aside class="fixed top-0 left-0 w-64 h-screen bg-secondary text-main z-50 border-r border-main">
-        <div class="p-4 border-b border-main font-bold">
-            DASHBOARD
-        </div>
-
-        <nav class="p-4 space-y-2">
-            <a href="#" class="block px-3 py-2 rounded hover:bg-primary">
-                Dashboard
-            </a>
-            <a href="#" class="block px-3 py-2 rounded hover:bg-primary">
-                CMS
-            </a>
-            <a href="#" class="block px-3 py-2 rounded hover:bg-primary">
-                Resource
-            </a>
-
-        </nav>
-        
-    </aside>
+    @include('components.dashboard-sidebar')
 
     <!-- HEADER -->
     <header class="fixed top-0 left-64 right-0 h-[57px] bg-secondary border-b border-main flex items-center px-6 z-40">

@@ -25,7 +25,7 @@ class AdminController extends Controller
             return view('admin.dashboard', [
                 'logs' => $logs,
                 'user' => $user,
-                'success' => 'Selamat datang '.$user->name,
+                'page' => 'main'
             ]);
         } else {
             // other else redirect with error
@@ -33,4 +33,20 @@ class AdminController extends Controller
         }
 
     }
+
+    public function showMain()
+    {
+        return view('admin.dashboard', ['page' => 'main']);
+    }
+
+    public function showContentManagementSystem()
+    {
+        return view('admin.dashboard', ['page' => 'cms']);
+    }
+
+    public function showReseourceManagement()
+    {
+        return view('admin.dashboard', ['page' => 'resource']);
+    }
+
 }

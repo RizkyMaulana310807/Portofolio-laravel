@@ -23,4 +23,8 @@ Route::get('/', function () {
 });
 
 // route dashboard admin only
-Route::get('/dashboard', [AdminController::class, 'showDashboard']);
+Route::redirect('dashboard', 'dashboard/main');
+
+Route::get('dashboard/main', [AdminController::class, 'showDashboard'])->name('dashboard.main');
+Route::get('dashboard/content-management-system', [AdminController::class, 'showContentManagementSystem'])->name('dashboard.contentmanagementsystem');
+Route::get('dashboard/resourcemanagement', [AdminController::class, 'showReseourceManagement'])->name('dashboard.resourcemanagement');

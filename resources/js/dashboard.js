@@ -5,6 +5,7 @@
 import { createChart } from "./dashboard/analytics";
 import { createIcons, icons } from 'lucide';
 import Alpine from "alpinejs";
+import AOS from "aos";
 
 createIcons({ icons });
 

@@ -30,7 +30,9 @@ class AuthController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect('/dashboard'); // ke dashboard
+            $userSaatIni = Auth::user();
+
+            return redirect()->route('dashboard.main')->with('success', 'Selamat datang '.$userSaatIni->name);
         }
 
         return back()->with([
