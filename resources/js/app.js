@@ -1,6 +1,6 @@
 import "./bootstrap";
 import "animate.css";
-import Alpine from "alpinejs";
+import Alpine from "alpinejs"; // Import first
 import AOS from "aos";
 import "aos/dist/aos.css";
 import {
@@ -26,7 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
     mouseHover();
     scroll();
 });
-
+// Start Alpine
+// and dont forget to import it firts
 window.Alpine = Alpine;
 Alpine.start();
 

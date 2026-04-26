@@ -21,22 +21,20 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         $credentials = $request->only('email', 'password');
-
         // Batasi cuma admin (email lo)
         if ($request->email !== 'rizkymaulana317b@gmail.com') {
-            return back()->withErrors([
-                'email' => 'Unauthorized',
+            return back()->with([
+                'error' => 'Unauthorized',
             ]);
         }
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-
-            return redirect('/'); // ke dashboard
+            return redirect('/dashboard'); // ke dashboard
         }
 
-        return back()->withErrors([
-            'email' => 'Email atau password salah',
+        return back()->with([
+            'error' => 'Email atau password salah',
         ]);
     }
 
