@@ -17,12 +17,11 @@
         </div>
     </div>
     {{-- content --}}
-    <div class=" grid grid-cols-3 w-full h-full items-start p-4 gap-4">
-        <x-cms-card></x-cms-card>
-        <x-cms-card></x-cms-card>
-        <x-cms-card></x-cms-card>
-        <x-cms-card></x-cms-card>
-        <x-cms-card></x-cms-card>
+    <div class="grid grid-cols-3 w-full h-full items-start p-4 gap-4">
+        @foreach ($cmsData as $item)
+        <x-cms-card :title="$item->judul" :subtitle="$item->sub_judul" :content="$item->isi_text"
+            :status="$item->status" :updatedAt="$item->updated_at->diffForHumans()" />
+        @endforeach
     </div>
 </div>
 
@@ -30,10 +29,22 @@
 <script>
     const textareas = document.querySelectorAll('.auto-textarea');
 
+    // Fungsi untuk mengatur tinggi
+    function adjustHeight(el) {
+        el.style.height = 'auto';
+        el.style.height = el.scrollHeight + 'px';
+    }
+
     textareas.forEach(textarea => {
-        textarea.addEventListener('input', function() {
-            this.style.height = 'auto';
-            this.style.height = this.scrollHeight + 'px';
+        // 1. Jalankan saat ada input (ketika user mengetik)
+        textarea.addEventListener('input', function () {
+            adjustHeight(this);
         });
+
+        // 2. Jalankan saat halaman pertama kali dimuat
+        // Menggunakan setTimeout agar browser sempat menghitung scrollHeight dengan benar
+        setTimeout(() => {
+            adjustHeight(textarea);
+        }, 10);
     });
 </script>

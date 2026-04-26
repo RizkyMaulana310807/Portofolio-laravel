@@ -4,6 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Logs;
+use App\Models\ContentManagementSystem;
 use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
@@ -25,13 +26,12 @@ class AdminController extends Controller
             return view('admin.dashboard', [
                 'logs' => $logs,
                 'user' => $user,
-                'page' => 'main'
+                'page' => 'main',
             ]);
         } else {
             // other else redirect with error
             return redirect('/')->with('error', 'Unauthorize');
         }
-
     }
 
     public function showMain()
@@ -41,12 +41,12 @@ class AdminController extends Controller
 
     public function showContentManagementSystem()
     {
-        return view('admin.dashboard', ['page' => 'cms']);
+        $cmsData = ContentManagementSystem::all();
+        return view('admin.dashboard', ['page' => 'cms', 'cmsData' => $cmsData]);
     }
 
     public function showReseourceManagement()
     {
         return view('admin.dashboard', ['page' => 'resource']);
     }
-
 }

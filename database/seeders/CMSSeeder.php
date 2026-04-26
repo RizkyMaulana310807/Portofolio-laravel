@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
 use App\Models\ContentManagementSystem;
+use Illuminate\Database\Seeder;
 
 class CMSSeeder extends Seeder
 {
@@ -16,13 +16,7 @@ class CMSSeeder extends Seeder
             [
                 'judul' => 'about_text',
                 'sub_judul' => 'isi text dari about',
-                'isi_text' => 'Hai! Saya Rizky,
-                                Seorang pengembang yang berfokus pada arsitektur logika, baik untuk web, mobile, maupun
-                                game. Dengan pengalaman komersial di Laravel (PHP) dan React Native (EAS Build), saya
-                                membangun
-                                sistem yang stabil dan efisien. Saya berpengalaman freelance untuk membuat aplikasi
-                                berbasis laravel (website) dan aplikasi berbasis react native (mobile) selama kurang
-                                lebih 6 bulan.',
+                'isi_text' => 'Hai! Saya Rizky, Seorang pengembang yang berfokus pada arsitektur logika, baik untuk web, mobile, maupun game. Dengan pengalaman komersial di Laravel (PHP) dan React Native (EAS Build), saya membangun sistem yang stabil dan efisien. Saya berpengalaman freelance untuk membuat aplikasi berbasis laravel (website) dan aplikasi berbasis react native (mobile) selama kurang lebih 6 bulan.',
                 'status' => 'published',
             ],
             [
