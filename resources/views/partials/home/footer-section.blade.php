@@ -4,10 +4,10 @@
 
         <div class="flex flex-row justify-between w-full">
             <h1 class="sm:text-xs text-base w-full font-quicksand">Rizky Maulana</h1>
-            <h3 class="text-xs w-full">FULLSTACK DEVELOPER / PROBLEM SOLVER</h3>
+            <h3 class="text-xs w-full text-end">FULLSTACK DEVELOPER / PROBLEM SOLVER</h3>
         </div>
 
-        <div class="border-b-4 border-darker bg-red-500"></div>
+        <div class="border-b-4 border-darker"></div>
 
         <div class="flex flex-row items-center justify-center">
             <h1 class="slogan font-bold text-xs xl:text-2xl">Driven by <span class="text-[#1B9AAA]">Logic</span>,
@@ -16,7 +16,7 @@
                 (literally 🏍️💨🚀).</h1>
         </div>
 
-        <div class="border-b-4 border-darker bg-red-500"></div>
+        <div class="border-b-4 border-darker"></div>
 
         <div class="flex flex-col xl:flex-row justify-start gap-4 xl:gap-2 w-full">
             <div class="xl:w-1/3">
@@ -67,7 +67,7 @@
 
         </div>
 
-        <div class="border-b-4 border-darker bg-red-500"></div>
+        <div class="border-b-4 border-darker"></div>
 
         <div class="flex flex-row justify-between p-4 xl:p-0">
             <h1 class="text-xs xl:text-base font-light font-fredoka">Copyright Rizky Maulana</h1>
