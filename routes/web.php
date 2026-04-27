@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\admin\AdminController;
+use App\Http\Controllers\WebController;
 
 // route login
 Route::get('/login', [AuthController::class, 'showLogin']);
@@ -18,9 +19,7 @@ Route::get('/test-email', function () {
     return 'email di kirim cek inbox lo';
 });
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [WebController::class, 'showHome'])->name('home');
 
 // route dashboard admin only
 Route::redirect('dashboard', 'dashboard/main');

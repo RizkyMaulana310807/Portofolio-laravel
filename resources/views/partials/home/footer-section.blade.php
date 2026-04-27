@@ -4,7 +4,12 @@
 
         <div class="flex flex-row justify-between w-full">
             <h1 class="sm:text-xs text-base w-full font-quicksand">Rizky Maulana</h1>
+<<<<<<< Updated upstream
             <h3 class="text-xs w-full">FULLSTACK DEVELOPER / PROBLEM SOLVER</h3>
+=======
+            <h3 class="text-xs w-full text-end">{{ $dataCms['main_role_text']->isi_text ?? '' }} /
+                {{ $dataCms['second_role_text']->isi_text ?? '' }}</h3>
+>>>>>>> Stashed changes
         </div>
 
         <div class="border-b-4 border-darker bg-red-500"></div>
@@ -52,15 +57,18 @@
                     <h1 class="font-bold text-xs xl:text-lg">Let's Connect</h1>
                     <a href="#"
                         class="text-xs xl:text-base underline underline-offset-4 decoration-dotted hover:text-blue-500 transition-all duration-200 ease-in-out group">
-                        Linkedin <i class="fa-brands fa-linkedin text-main text-xs xl:text-2xl group-hover:text-blue-500"></i>
+                        Linkedin <i
+                            class="fa-brands fa-linkedin text-main text-xs xl:text-2xl group-hover:text-blue-500"></i>
                     </a>
                     <a href="#"
                         class="text-xs xl:text-base underline underline-offset-4 decoration-dotted hover:text-blue-500 transition-all duration-200 ease-in-out group">
-                        Instagram <i class="fa-brands fa-instagram text-main text-xs xl:text-2xl group-hover:text-blue-500"></i>
+                        Instagram <i
+                            class="fa-brands fa-instagram text-main text-xs xl:text-2xl group-hover:text-blue-500"></i>
                     </a>
                     <a href="#"
                         class="text-xs xl:text-base underline underline-offset-4 decoration-dotted hover:text-blue-500 transition-all duration-200 ease-in-out group">
-                        Github <i class="fa-brands fa-github text-main text-xs xl:text-2xl group-hover:text-blue-500"></i>
+                        Github <i
+                            class="fa-brands fa-github text-main text-xs xl:text-2xl group-hover:text-blue-500"></i>
                     </a>
                 </div>
             </div>

@@ -63,13 +63,7 @@
                                 class="h-18 xl:h-32 rounded-full border-4 border-darker z-20">
                         </div>
                         <div class="flex">
-                            <p class="text-xs xl:text-base font-quicksand font-semibold z-20">Hai! Saya Rizky,
-                                Seorang pengembang yang berfokus pada arsitektur logika, baik untuk web, mobile, maupun
-                                game. Dengan pengalaman komersial di Laravel (PHP) dan React Native (EAS Build), saya
-                                membangun
-                                sistem yang stabil dan efisien. Saya berpengalaman freelance untuk membuat aplikasi
-                                berbasis laravel (website) dan aplikasi berbasis react native (mobile) selama kurang
-                                lebih 6 bulan.</p>
+                            <p class="text-xs xl:text-base font-quicksand font-semibold z-20">{{ $dataCms['about_text']->isi_text ?? '' }}</p>
                         </div>
                         <div class="flex w-full flex-col gap-4">
                             @php
