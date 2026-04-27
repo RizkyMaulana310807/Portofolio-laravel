@@ -19,7 +19,7 @@
     {{-- content --}}
     <div class="grid grid-cols-3 w-full h-full items-start p-4 gap-4">
         @foreach ($cmsData as $item)
-        <x-cms-card :title="$item->judul" :subtitle="$item->sub_judul" :content="$item->isi_text"
+        <x-cms-card :id="$item->id" :title="$item->judul" :subtitle="$item->sub_judul" :content="$item->isi_text"
             :status="$item->status" :updatedAt="$item->updated_at->diffForHumans()" />
         @endforeach
     </div>

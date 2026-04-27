@@ -3,8 +3,9 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Logs;
 use App\Models\ContentManagementSystem;
+use App\Models\Logs;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
@@ -42,11 +43,27 @@ class AdminController extends Controller
     public function showContentManagementSystem()
     {
         $cmsData = ContentManagementSystem::all();
+
         return view('admin.dashboard', ['page' => 'cms', 'cmsData' => $cmsData]);
     }
 
     public function showReseourceManagement()
     {
         return view('admin.dashboard', ['page' => 'resource']);
+    }
+
+    // CRUD
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'isi_text' => 'required',
+        ]);
+
+        ContentManagementSystem::where('id', $id)->update([
+            'isi_text' => $request->isi_text,
+        ]);
+
+        return redirect()->back()->with('success', 'Berhasil update');
+
     }
 }

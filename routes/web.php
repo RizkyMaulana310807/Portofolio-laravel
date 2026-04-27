@@ -27,3 +27,7 @@ Route::redirect('dashboard', 'dashboard/main');
 Route::get('dashboard/main', [AdminController::class, 'showDashboard'])->name('dashboard.main');
 Route::get('dashboard/content-management-system', [AdminController::class, 'showContentManagementSystem'])->name('dashboard.contentmanagementsystem');
 Route::get('dashboard/resourcemanagement', [AdminController::class, 'showReseourceManagement'])->name('dashboard.resourcemanagement');
+
+// route CRUD
+// CRUD CMS
+Route::put('dashboard/cms/save/{id}', [AdminController::class, 'update'])->name('cms.update');
