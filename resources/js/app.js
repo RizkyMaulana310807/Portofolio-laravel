@@ -14,6 +14,10 @@ import { mouseHover } from "./home/about";
 import { scroll } from "./home/projectsScroll";
 import { createIcons, icons } from "lucide";
 
+// web hook
+import Echo from 'laravel-echo';
+import Pusher from 'pusher-js';
+
 createIcons({ icons });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -26,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     mouseHover();
     scroll();
 });
+
 // Start Alpine
 // and dont forget to import it firts
 window.Alpine = Alpine;

@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Mail;
-use App\Http\Controllers\AuthController;
 use App\Http\Controllers\admin\AdminController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\WebController;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Route;
 
 // route login
 Route::get('/login', [AuthController::class, 'showLogin']);
@@ -13,9 +13,10 @@ Route::post('/logout', [AuthController::class, 'logout']);
 
 // route tes kirim email
 Route::get('/test-email', function () {
-    Mail::raw("ini email test dari Laravel", function ($mesasage) {
+    Mail::raw('ini email test dari Laravel', function ($mesasage) {
         $mesasage->to('rizkymaulana317b@gmail.com')->subject('test email');
     });
+
     return 'email di kirim cek inbox lo';
 });
 
@@ -31,3 +32,16 @@ Route::get('dashboard/resourcemanagement', [AdminController::class, 'showReseour
 // route CRUD
 // CRUD CMS
 Route::put('dashboard/cms/save/{id}', [AdminController::class, 'update'])->name('cms.update');
+
+Route::post('/send', function (Request $request) {
+
+    $message = $request->input('message');
+
+    event(new MessageSent($message));
+
+    return response()->json(['status' => 'ok']);
+});
+
+Route::get('/chat', function () {
+    return view('chat');
+});
