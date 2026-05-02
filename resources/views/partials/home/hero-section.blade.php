@@ -25,8 +25,9 @@
     </div>
     <div class="w-full xl:w-1/2 h-full relative">
         <img src="{{ asset('images/programmer.webp') }}" loading="lazy">
-        <x-floating-card name="{{ $dataCms['first_tag']->isi_text ?? '' }}" class="top-[70px] left-[0vw]"></x-floating-card>
-        <x-floating-card name="{{ $dataCms['second_tag']->isi_text ?? '' }}" class="top-[20px] left-[30vw]"></x-floating-card>
-        <x-floating-card name="{{ $dataCms['third_tag']->isi_text ?? '' }}" class="top-[5px] left-[10vw]"></x-floating-card>
+        {{ $dataCms['first_tag']->isi_text }}
+        <x-floating-card name="{{ $dataCms['first_tag']->isi_text }}" class="top-[70px] left-[0vw]"></x-floating-card>
+        <x-floating-card name="{{ $dataCms['second_tag']->isi_text }}" class="top-[20px] left-[30vw]"></x-floating-card>
+        <x-floating-card name="{{ $dataCms['third_tag']->isi_text }}" class="top-[5px] left-[10vw]"></x-floating-card>
     </div>
 </div>

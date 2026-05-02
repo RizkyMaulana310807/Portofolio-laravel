@@ -4,12 +4,8 @@
 
         <div class="flex flex-row justify-between w-full">
             <h1 class="sm:text-xs text-base w-full font-quicksand">Rizky Maulana</h1>
-<<<<<<< Updated upstream
-            <h3 class="text-xs w-full">FULLSTACK DEVELOPER / PROBLEM SOLVER</h3>
-=======
             <h3 class="text-xs w-full text-end">{{ $dataCms['main_role_text']->isi_text ?? '' }} /
                 {{ $dataCms['second_role_text']->isi_text ?? '' }}</h3>
->>>>>>> Stashed changes
         </div>
 
         <div class="border-b-4 border-darker bg-red-500"></div>

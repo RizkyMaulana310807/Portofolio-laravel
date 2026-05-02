@@ -14,7 +14,7 @@ class floatingCard extends Component
     public $name;
     public function __construct($name)
     {
-        $this->$name = $name;
+        $this->name = $name;
     }
 
     /**
