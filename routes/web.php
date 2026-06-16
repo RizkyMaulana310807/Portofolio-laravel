@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\WebController;
 
+
 // route login
 Route::get('/login', [AuthController::class, 'showLogin']);
 Route::post('/login', [AuthController::class, 'login']);
@@ -19,7 +20,7 @@ Route::get('/test-email', function () {
     return 'email di kirim cek inbox lo';
 });
 
-Route::get('/', [WebController::class, 'showHome'])->name('home');
+Route::get('/', [WebController::class, 'showHome']);
 
 // route dashboard admin only
 Route::redirect('dashboard', 'dashboard/main');
