@@ -7,7 +7,7 @@ import Navbar from "@/Components/Navbar";
 
 export default function Home(props) {
     return (
-        <>
+        <div className="bg-rm-primary">
             <Navbar />
             <HeroSection
                 mainRoleText={props.mainRoleText}
@@ -24,6 +24,6 @@ export default function Home(props) {
                 mainRoleText={props.mainRoleText}
                 secondRoleText={props.secondRoleText}
             />
-        </>
+        </div>
     );
 }

@@ -13,7 +13,7 @@ export default function FooterSection({
 
     return (
         <div className="xl:w-screen flex py-8">
-            <div className="w-screen h-full bg-rm-primary mx-6 xl:mx-16 p-4 xl:p-8 rounded-2xl space-y-4 xl:space-y-16 border-4 border-darker">
+            <div className="w-screen h-full bg-rm-primary mx-6 xl:mx-16 p-4 xl:p-8 rounded-2xl space-y-4 xl:space-y-16 border-4 border-rm-darker">
 
                 <div className="flex flex-row justify-between w-full">
                     <h1 className="sm:text-xs text-base w-full font-quicksand">
@@ -25,7 +25,7 @@ export default function FooterSection({
                     </h3>
                 </div>
 
-                <div className="border-b-4 border-darker"></div>
+                <div className="border-b-4 border-rm-darker"></div>
 
                 <div className="flex flex-row items-center justify-center">
                     {/* <h1 className="slogan font-bold text-xs xl:text-2xl">
@@ -53,7 +53,7 @@ export default function FooterSection({
 
                 </div>
 
-                <div className="border-b-4 border-darker"></div>
+                <div className="border-b-4 border-rm-darker"></div>
 
                 <div className="flex flex-col xl:flex-row justify-start gap-4 xl:gap-2 w-full">
 
@@ -167,7 +167,7 @@ export default function FooterSection({
                     </div>
                 </div>
 
-                <div className="border-b-4 border-darker"></div>
+                <div className="border-b-4 border-rm-darker"></div>
 
                 <div className="flex flex-row justify-between p-4 xl:p-0">
                     <h1 className="text-xs xl:text-base font-light font-fredoka">

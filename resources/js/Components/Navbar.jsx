@@ -1,6 +1,13 @@
 import React from "react";
 import LogoDark from "../Assets/LogoDark.svg"
+import GooeyNav from "./GooeyNav";
 export default function Navbar() {
+    const items = [
+        { label: "Works", href: "#" },
+        { label: "About", href: "#" },
+        { label: "Certificate", href: "#" },
+    ];
+
     return (
         <nav className="bg-rm-primary text-rm-main border-b-2 border-rm-secondary">
             <div className="max-w-7xl mx-auto p-4">
@@ -18,7 +25,7 @@ export default function Navbar() {
 
                     {/* Menu Desktop */}
                     <div className="hidden lg:flex space-x-6">
-                        <a
+                        {/* <a
                             href="/"
                             className="font-quicksand font-bold hover:underline hover:underline-offset-4 text-md transition duration-200 ease-in-out"
                         >
@@ -37,7 +44,18 @@ export default function Navbar() {
                             className="font-quicksand font-bold hover:underline hover:underline-offset-4 text-md transition duration-200 ease-in-out"
                         >
                             CERTIFICATE
-                        </a>
+                        </a> */}
+                        <GooeyNav
+                            items={items}
+                            particleCount={15}
+                            particleDistances={[90, 10]}
+                            particleR={100}
+                            initialActiveIndex={0}
+                            animationTime={600}
+                            timeVariance={300}
+                            colors={[1, 2, 3, 1, 2, 3, 1, 4]}
+                        />
+
                     </div>
 
                     {/* Social Icons */}
