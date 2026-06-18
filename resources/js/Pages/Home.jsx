@@ -4,26 +4,36 @@ import ProjectsSection from "../Components/ProjectSection";
 import AboutSection from "../Components/AboutSection";
 import FooterSection from "../Components/FooterSection";
 import Navbar from "@/Components/Navbar";
+import ClickSpark from "@/Components/ClickSpark";
 
 export default function Home(props) {
     return (
-        <div className="bg-rm-primary">
-            <Navbar />
-            <HeroSection
-                mainRoleText={props.mainRoleText}
-                secondRoleText={props.secondRoleText}
-            />
+        <ClickSpark
+            sparkColor="#1f2421"
+            sparkSize={10}
+            sparkRadius={55}
+            sparkCount={8}
+            duration={400}
+        >
+            <div className="bg-rm-primary">
+                <Navbar />
+                <HeroSection
+                    mainRoleText={props.mainRoleText}
+                    secondRoleText={props.secondRoleText}
+                />
 
-            <ProjectsSection />
+                <ProjectsSection />
 
-            <AboutSection
-                aboutText={props.aboutText}
-            />
+                <AboutSection
+                    aboutText={props.aboutText}
+                />
 
-            <FooterSection
-                mainRoleText={props.mainRoleText}
-                secondRoleText={props.secondRoleText}
-            />
-        </div>
+                <FooterSection
+                    mainRoleText={props.mainRoleText}
+                    secondRoleText={props.secondRoleText}
+                />
+            </div>
+        </ClickSpark>
+
     );
 }

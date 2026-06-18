@@ -443,7 +443,7 @@ const ProfileCardComponent = ({
             className="absolute inset-0"
             style={{
               backgroundImage: 'var(--inner-gradient)',
-              backgroundColor: 'rgba(0, 0, 0, 0.9)',
+              backgroundColor: '#1f2421',
               borderRadius: cardRadius,
               display: 'grid',
               gridArea: '1 / -1'

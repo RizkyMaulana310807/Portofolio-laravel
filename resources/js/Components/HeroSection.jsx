@@ -1,6 +1,5 @@
 // HeroSection.jsx
 import React from "react";
-import ClickSpark from './ClickSpark';
 import StarBorder from './StarBorder'
 import SplitText from "./SplitText";
 import TextType from './TextType';
@@ -32,13 +31,6 @@ export default function HeroSection({
     };
     return (
 
-            <ClickSpark
-            sparkColor="#1f2421"
-            sparkSize={10}
-            sparkRadius={55}
-            sparkCount={8}
-            duration={400}
-            >
             <div className="w-screen h-screen flex flex-col xl:flex-row border-b-4 border-rm-secondary">
 
                 <div className="w-full xl:w-1/2 h-full flex items-center justify-normal xl:justify-center">
@@ -148,7 +140,6 @@ export default function HeroSection({
                 </div>
                 </div>
             </div>
-            </ClickSpark>
 
     );
 }
