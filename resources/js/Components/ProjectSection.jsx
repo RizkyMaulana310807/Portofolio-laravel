@@ -7,11 +7,10 @@ export default function ProjectsSection() {
     { link: '#', text: 'Digit.IO', image: 'https://picsum.photos/600/400?random=2', category: 'Platformer', date: '2024, March' },
     { link: '#', text: 'Rent A Stuff', image: 'https://picsum.photos/600/400?random=3', category: 'Platformer', date: '2024, March' },
     { link: '#', text: 'Give Me A Bucking Job', image: 'https://picsum.photos/600/400?random=4', category: 'Platformer', date: '2024, March' },
-
     ];
 
     return (
-        <div className="w-screen h-screen flex flex-col items-center justify-center">
+        <div className="w-screen h-screen flex flex-col items-center justify-center bg-red-500">
 
             <div className="w-full p-2 xl:p-8 border-b-2 border-rm-main">
                 <h1 className="font-fredoka text-2xl xl:text-4xl font-bold text-main">
@@ -24,8 +23,8 @@ export default function ProjectsSection() {
                 speed={15}
                 textColor="#1f2421"
                 bgColor="#e9f1f7"
-                marqueeBgColor="#FDF7FA"
-                marqueeTextColor="#ff9f1c"
+                marqueeBgColor="#1f2421"
+                marqueeTextColor="#FDF7FA"
                 borderColor="#1f2421"
                 />
             </div>

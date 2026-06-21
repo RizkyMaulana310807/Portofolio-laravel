@@ -1,6 +1,9 @@
 import React from "react";
 import LogoDark from "../Assets/LogoDark.svg"
 import GooeyNav from "./GooeyNav";
+import GlareHover from './GlareHover'
+
+
 export default function Navbar() {
     const items = [
         { label: "Works", href: "#" },
@@ -14,37 +17,26 @@ export default function Navbar() {
                 <div className="flex justify-between items-center">
 
                     {/* Logo */}
-                    <div className="flex items-center font-quicksand space-x-2 text-rm-primary p-4 rounded-l-md">
-                    <img
-                        src={LogoDark}
-                        alt="Logo"
-                        className="w-10 h-10"
-                    />
-
+                    <div className="relative flex items-center justify-center w-18 h-18">
+                        <GlareHover
+                            width="72px"
+                            height="72px"
+                            background="transparent"
+                            borderColor="transparent"
+                            glareColor="#ffffff"
+                            glareOpacity={0.3}
+                            glareAngle={-30}
+                            glareSize={300}
+                        >
+                            <img
+                                src={LogoDark}
+                                alt="Logo"
+                                className="w-12 h-12"
+                            />
+                        </GlareHover>
                     </div>
-
                     {/* Menu Desktop */}
                     <div className="hidden lg:flex space-x-6">
-                        {/* <a
-                            href="/"
-                            className="font-quicksand font-bold hover:underline hover:underline-offset-4 text-md transition duration-200 ease-in-out"
-                        >
-                            WORKS
-                        </a>
-
-                        <a
-                            href="/about"
-                            className="font-quicksand font-bold hover:underline hover:underline-offset-4 text-md transition duration-200 ease-in-out"
-                        >
-                            ABOUT
-                        </a>
-
-                        <a
-                            href="/contact"
-                            className="font-quicksand font-bold hover:underline hover:underline-offset-4 text-md transition duration-200 ease-in-out"
-                        >
-                            CERTIFICATE
-                        </a> */}
                         <GooeyNav
                             items={items}
                             particleCount={15}

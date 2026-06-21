@@ -3,7 +3,7 @@ import HeroSection from "../Components/HeroSection";
 import ProjectsSection from "../Components/ProjectSection";
 import AboutSection from "../Components/AboutSection";
 import FooterSection from "../Components/FooterSection";
-import Navbar from "@/Components/Navbar";
+// import Navbar from "@/Components/Navbar";
 import ClickSpark from "@/Components/ClickSpark";
 
 export default function Home(props) {
@@ -16,7 +16,6 @@ export default function Home(props) {
             duration={400}
         >
             <div className="bg-rm-primary">
-                <Navbar />
                 <HeroSection
                     mainRoleText={props.mainRoleText}
                     secondRoleText={props.secondRoleText}
