@@ -12,6 +12,10 @@
 @source '../**/*.js';
 
 @theme {
+
+    --font-fredoka: "Fredoka", sans-serif;
+    --font-quicksand: "Quicksand", sans-serif;
+    
     /* Portfolio Theme */
     --color-rm-primary: #e9f1f7;
     --color-rm-secondary: #e1ecf4;
@@ -87,6 +91,20 @@
     --radius-2xl: calc(var(--radius) * 1.8);
     --radius-3xl: calc(var(--radius) * 2.2);
     --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+@font-face {
+    font-family: 'Fredoka';
+    src: url('/fonts/Fredoka/FredokaVariable.ttf') format('truetype');
+    font-weight: 300 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('/fonts/Quicksand/QuicksandVariable.ttf') format('truetype');
+    font-weight: 300 700;
+    font-style: normal;
 }
 
 :root {

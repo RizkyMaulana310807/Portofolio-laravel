@@ -16,13 +16,41 @@ export default function FooterSection({
             <div className="w-screen h-full bg-rm-primary mx-6 xl:mx-16 p-4 xl:p-8 rounded-2xl space-y-4 xl:space-y-16 border-4 border-rm-darker">
 
                 <div className="flex flex-row justify-between w-full">
-                    <h1 className="sm:text-xs text-base w-full font-quicksand">
-                        Rizky Maulana
-                    </h1>
+                    <div className="w-full text-left">
+                        <SplitText
+                            text="rizky maulana"
+                            className="text-xs font-quicksand uppercase font-bold"
+                            delay={50}
+                            duration={0.25}
+                            ease="power3.out"
+                            splitType="chars"
+                            from={{ opacity: 0, y: 40 }}
+                            to={{ opacity: 1, y: 0 }}
+                            threshold={0.1}
+                            rootMargin="-100px"
+                            textAlign="center"
+                            onLetterAnimationComplete={handleAnimationComplete}
+                            showCallback
+                        />
+                    </div>
 
-                    <h3 className="text-xs w-full text-end">
-                        {mainRoleText} / {secondRoleText}
-                    </h3>
+                    <div className="w-full text-right">
+                        <SplitText
+                            text={`${mainRoleText} / ${secondRoleText}`}
+                            className="text-xs font-quicksand uppercase font-bold"
+                            delay={20}
+                            duration={0.25}
+                            ease="power3.out"
+                            splitType="chars"
+                            from={{ opacity: 0, y: 40 }}
+                            to={{ opacity: 1, y: 0 }}
+                            threshold={0.1}
+                            rootMargin="-100px"
+                            textAlign="center"
+                            onLetterAnimationComplete={handleAnimationComplete}
+                            showCallback
+                        />
+                    </div>
                 </div>
 
                 <div className="border-b-4 border-rm-darker"></div>
@@ -37,9 +65,9 @@ export default function FooterSection({
                     </h1> */}
                     <SplitText
                         text="Driven By Logic Powered By Code And Tuned For Performance (literally 🏍️💨🚀)."
-                        className="text-2xl font-semibold text-center"
+                        className="text-2xl font-fredoka font-semibold text-center"
                         delay={50}
-                        duration={1.25}
+                        duration={0.25}
                         ease="power3.out"
                         splitType="chars"
                         from={{ opacity: 0, y: 40 }}

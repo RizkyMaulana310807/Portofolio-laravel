@@ -10,26 +10,28 @@ export default function ProjectsSection() {
     ];
 
     return (
-        <div className="w-screen h-screen flex flex-col items-center justify-center bg-red-500">
+        <div className="w-screen h-screen flex flex-col items-center bg-red-500">
+            <div className="bg-blue-500 flex w-full flex-col">
+                <div className="w-full p-2 xl:p-8 border-b-2 border-rm-main">
+                    <h1 className="font-fredoka text-2xl xl:text-4xl font-bold text-main">
+                        <span className="bg-rm-special text-rm-primary">Featured</span> Projects
+                    </h1>
+                </div>
 
-            <div className="w-full p-2 xl:p-8 border-b-2 border-rm-main">
-                <h1 className="font-fredoka text-2xl xl:text-4xl font-bold text-main">
-                    <span className="bg-rm-special text-rm-primary">Featured</span> Projects
-                </h1>
+                <div style={{ height: '600px', position: 'relative' }} className="flex w-full">
+                    <FlowingMenu items={demoItems}
+                    speed={15}
+                    textColor="#1f2421"
+                    bgColor="#e9f1f7"
+                    marqueeBgColor="#1f2421"
+                    marqueeTextColor="#FDF7FA"
+                    borderColor="#1f2421"
+                    />
+                </div>
             </div>
-
-            <div style={{ height: '600px', position: 'relative' }} className="flex w-full">
-                <FlowingMenu items={demoItems}
-                speed={15}
-                textColor="#1f2421"
-                bgColor="#e9f1f7"
-                marqueeBgColor="#1f2421"
-                marqueeTextColor="#FDF7FA"
-                borderColor="#1f2421"
-                />
+            <div className="bg-yellow-500 h-full w-full">
+                <h1>Hello world</h1>
             </div>
-
-
         </div>
     );
 }

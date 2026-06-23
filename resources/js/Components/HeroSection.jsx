@@ -40,7 +40,7 @@ export default function HeroSection({
 
                             <div>
                                 <div className="flex flex-col font-bold">
-                                    <p className="text-sm xl:text-baserole-title text-rm-special font-quicksand underline underline-offset-4">
+                                    <p className="text-sm xl:text-baserole-title text-rm-special font-quicksand font-bold underline underline-offset-4">
                                         {mainRoleText} - {secondRoleText}
                                     </p>
                                 </div>
@@ -73,29 +73,89 @@ export default function HeroSection({
                                         variableSpeedMin={60}
                                         variableSpeedMax={120}
                                         cursorBlinkDuration={0.5}
-                                        className="font-quicksand text-2xl h-12 flex"
+                                        className="font-quicksand font-bold text-2xl h-12 flex"
                                     />
 
                                 </div>
                             </div>
 
                             <div className="flex flex-col gap-8">
-                                <StarBorder
-                                    as="button"
-                                    className="animation w-1/2 hover:cursor-pointer"
-                                    color="magenta"
-                                    speed="5s"
-                                    thickness={5}
-                                >
-                                <i className="fa-solid fa-download text-sm xl:text-base"></i>
-                                    DOWNLOAD CV
-                                </StarBorder>
+                                <div className="flex flex-row gap-8 items-center">
+                                    <div className="">
+                                        <StarBorder
+                                            as="button"
+                                            className="animation w-full hover:cursor-pointer font-quicksand font-bold"
+                                            color="magenta"
+                                            speed="5s"
+                                            thickness={5}
+                                        >
+                                        <i className="fa-solid fa-download text-sm xl:text-base"></i>
+                                            DOWNLOAD CV
+                                        </StarBorder>
+                                    </div>
+                                    <div className="hidden md:flex space-x-6 pr-4">
+                                        <div
+                                            title="rzkymaulana at LinkedIn"
+                                            className="
+                                                icon
+                                                w-12 h-12 p-2
+                                                bg-rm-secondary
+                                                flex items-center justify-center
+                                                rounded-full
+                                                border-3 border-transparent
+                                                hover:border-rm-main
+                                                hover:bg-rm-main
+                                                transition-all duration-250 ease-in-out
+                                                group cursor-pointer
+                                            "
+                                        >
+                                            <i className="fa-brands fa-linkedin text-[#0A66C2] text-2xl group-hover:text-rm-bright"></i>
+                                        </div>
+
+                                        <div
+                                            title="RizkyMaulana310807 at GitHub"
+                                            className="
+                                                icon
+                                                w-12 h-12 p-2
+                                                bg-rm-secondary
+                                                flex items-center justify-center
+                                                rounded-full
+                                                border-3 border-transparent
+                                                hover:border-rm-main
+                                                hover:bg-rm-main
+                                                transition-all duration-250 ease-in-out
+                                                group cursor-pointer
+                                            "
+                                        >
+                                            <i className="fa-brands fa-github fa-2xl group-hover:text-rm-bright"></i>
+                                        </div>
+
+                                        <div
+                                            title="maulana.rizky.connect@gmail.com"
+                                            className="
+                                                icon
+                                                w-12 h-12 p-2
+                                                bg-rm-secondary
+                                                flex items-center justify-center
+                                                rounded-full
+                                                border-3 border-transparent
+                                                hover:border-rm-main
+                                                hover:bg-rm-main
+                                                transition-all duration-250 ease-in-out
+                                                group cursor-pointer
+                                            "
+                                        >
+                                            <i className="fas fa-envelope fa-xl text-[#EA4335] group-hover:text-rm-bright"></i>
+                                        </div>
+
+                                    </div>
+                                </div>
 
                                 <div className="flex gap-8">
                                     {stats.map((item, index) => (
                                         <div key={index} className="flex flex-col items-center gap-4">
                                             <div className="flex flex-row">
-                                                <p className="font-fredoka font-bold text-rm-special text-4xl">
+                                                <p className="font-quicksand font-bold text-rm-special text-4xl">
                                                     +
                                                 </p>
 
@@ -105,11 +165,11 @@ export default function HeroSection({
                                                     separator=","
                                                     direction="up"
                                                     duration={1}
-                                                    className="count-up-text text-4xl"
+                                                    className="count-up-text text-4xl font-fredoka font-semibold"
                                                     delay={0}
                                                 />
 
-                                                <p className="font-fredoka font-bold text-4xl text-transparent">
+                                                <p className="font-quicksand font-bold text-4xl text-transparent">
                                                     +
                                                 </p>
                                             </div>
@@ -134,7 +194,7 @@ export default function HeroSection({
                                 name="Rizky Maulana"
                                 title="Fullstack Engineer"
                                 handle="rzkymaulana"
-                                status="Online"
+                                status="Avaliable"
                                 contactText="Contact Me"
                                 avatarUrl={Profile}
                                 showUserInfo={true}

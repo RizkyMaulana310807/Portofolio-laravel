@@ -1,7 +1,6 @@
 import React from "react";
 import { useState, useRef } from "react";
-import TextPressure from './TextPressure';
-import VariableProximity from "./VariableProximity";
+import ShinyText from './ShinyText';
 
 export default function AboutSection({ aboutText }) {
     const [tab, setTab] = useState("about");
@@ -27,39 +26,31 @@ export default function AboutSection({ aboutText }) {
         },
     ];
 
+    
     return (
-        <div className="w-screen h-screen flex flex-col bg-red-500">
+        <div className="w-screen h-screen flex flex-col">
             <p>Drop me a letter</p>
             {/* content */}
-            <div className="flex flex-row gap-4 bg-blue-500 h-full p-6">
-                <div className="w-1/2 bg-yellow-500 p-8 relative">
-                    <TextPressure
-                        text="Let's build your idea to reality"
-                        flex
-                        alpha={false}
-                        stroke={false}
-                        width
-                        weight
-                        italic
-                        textColor="#ffffff"
-                        strokeColor="#5227FF"
-                        minFontSize={36}
-                        className="font-fredoka font-bold text-8xl"
-                    />
+            <div className="flex flex-row gap-4 h-full p-6">
+                <div className="w-1/2 p-8 relative flex items-center justify-center">
 
-                    <VariableProximity
-                        label={'Testing font size variable proxymity'}
-                        className={'variable-proximity-demo'}
-                        fromFontVariationSettings="'wght' 400, 'opsz' 9"
-                        toFontVariationSettings="'wght' 1000, 'opsz' 40"
-                        containerRef={containerRef}
-                        radius={100}
-                        falloff="linear"
+                    <ShinyText
+                        text="Available for freelance and full-time opportunities."
+                        speed={2}
+                        delay={0}
+                        color="#1f2421"
+                        shineColor="#ffffff"
+                        spread={120}
+                        direction="left"
+                        yoyo={false}
+                        pauseOnHover={false}
+                        disabled={false}
+                        className="font-fredoka font-bold text-8xl uppercase"
                     />
 
                 </div>
                 <div className="w-1/2 bg-yellow-500 p-8">
-
+                    
                 </div>
             </div>
         </div>

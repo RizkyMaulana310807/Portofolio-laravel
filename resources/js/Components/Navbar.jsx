@@ -2,9 +2,14 @@ import React from "react";
 import LogoDark from "../Assets/LogoDark.svg"
 import GooeyNav from "./GooeyNav";
 import GlareHover from './GlareHover'
-
+import { SunMoon, Languages } from "lucide-react";
+import { useState, useRef } from "react";
 
 export default function Navbar() {
+
+    const [mode, setMode] = useState("light");
+    const [languages, setLanguages] = useState("en")
+    
     const items = [
         { label: "Works", href: "#" },
         { label: "About", href: "#" },
@@ -50,60 +55,15 @@ export default function Navbar() {
 
                     </div>
 
-                    {/* Social Icons */}
-                    <div className="hidden md:flex space-x-6 pr-4">
+                    {/* Toggle Icon */}
 
-                        <div
-                            className="
-                                icon
-                                w-12 h-12 p-2
-                                bg-rm-secondary
-                                flex items-center justify-center
-                                rounded-full
-                                border-3 border-transparent
-                                hover:border-rm-main
-                                hover:bg-rm-main
-                                transition-all duration-250 ease-in-out
-                                group cursor-pointer
-                            "
-                        >
-                            <i className="fa-brands fa-linkedin text-[#0A66C2] text-2xl group-hover:text-rm-bright"></i>
-                        </div>
-
-                        <div
-                            className="
-                                icon
-                                w-12 h-12 p-2
-                                bg-rm-secondary
-                                flex items-center justify-center
-                                rounded-full
-                                border-3 border-transparent
-                                hover:border-rm-main
-                                hover:bg-rm-main
-                                transition-all duration-250 ease-in-out
-                                group cursor-pointer
-                            "
-                        >
-                            <i className="fa-brands fa-github fa-2xl group-hover:text-rm-bright"></i>
-                        </div>
-
-                        <div
-                            className="
-                                icon
-                                w-12 h-12 p-2
-                                bg-rm-secondary
-                                flex items-center justify-center
-                                rounded-full
-                                border-3 border-transparent
-                                hover:border-rm-main
-                                hover:bg-rm-main
-                                transition-all duration-250 ease-in-out
-                                group cursor-pointer
-                            "
-                        >
-                            <i className="fas fa-envelope fa-xl text-[#EA4335] group-hover:text-rm-bright"></i>
-                        </div>
-
+                    <div className="flex flex-row gap-4">
+                        <span onClick={() => setMode(mode === "light" ? "dark" : "light")} title={`Switch ${mode === "light" ? "Dark" : "Light"} Mode`} className={`p-3 rounded-full cursor-pointer transition-all duration-200 ease-in-out ${mode === "light" ? "bg-rm-primary" : "bg-rm-main text-rm-primary"}`}>
+                            <SunMoon size={24} />
+                        </span>
+                        <span onClick={() => setLanguages(languages === "en" ? "id" : "en")} title={`Switch to ${languages === "en" ? "ID" : "EN"}`} className={`p-3 rounded-full cursor-pointer ${languages === "en" ? "bg-rm-primary" : "bg-rm-special text-rm-primary"}`}>
+                            <Languages size={24} />
+                        </span>
                     </div>
 
                 </div>

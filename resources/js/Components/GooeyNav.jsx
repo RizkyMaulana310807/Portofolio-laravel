@@ -51,7 +51,7 @@ const GooeyNav = ({
         particle.style.setProperty('--end-y', `${p.end[1]}px`);
         particle.style.setProperty('--time', `${p.time}ms`);
         particle.style.setProperty('--scale', `${p.scale}`);
-        particle.style.setProperty('--color', `var(--color-${p.color}, white)`);
+        particle.style.setProperty('--color', `var(--color-${p.color}, black)`);
         particle.style.setProperty('--rotate', `${p.rotate}deg`);
         point.classList.add('point');
         particle.appendChild(point);
@@ -146,6 +146,9 @@ const GooeyNav = ({
           .effect.text {
             color: black;
             transition: color 0.3s ease;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700;
+
           }
           .effect.text.active {
             color: white;
@@ -282,7 +285,7 @@ const GooeyNav = ({
             {items.map((item, index) => (
               <li
                 key={index}
-                className={`rounded-full relative cursor-pointer transition-[background-color_color_box-shadow] duration-300 ease shadow-[0_0_0.5px_1.5px_transparent] text-black ${
+                className={`rounded-full relative cursor-pointer transition-[background-color_color_box-shadow] duration-300 ease shadow-[0_0_0.5px_1.5px_transparent] font-quicksand font-bold text-black ${
                   activeIndex === index ? 'active' : ''
                 }`}>
                 <a
