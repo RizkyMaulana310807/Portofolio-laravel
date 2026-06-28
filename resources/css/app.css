@@ -4,6 +4,9 @@
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/geist";
 
+html {
+    scroll-behavior: smooth;
+}
 @custom-variant dark (&:is(.dark *));
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
@@ -15,7 +18,7 @@
 
     --font-fredoka: "Fredoka", sans-serif;
     --font-quicksand: "Quicksand", sans-serif;
-    
+
     /* Portfolio Theme */
     --color-rm-primary: #e9f1f7;
     --color-rm-secondary: #e1ecf4;

@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useRef } from "react";
-import ShinyText from './ShinyText';
+import ScrollFloat from "./ScrollFloat";
 
 export default function AboutSection({ aboutText }) {
     const [tab, setTab] = useState("about");
@@ -34,19 +34,17 @@ export default function AboutSection({ aboutText }) {
             <div className="flex flex-row gap-4 h-full p-6">
                 <div className="w-1/2 p-8 relative flex items-center justify-center">
 
-                    <ShinyText
-                        text="Available for freelance and full-time opportunities."
-                        speed={2}
-                        delay={0}
-                        color="#1f2421"
-                        shineColor="#ffffff"
-                        spread={120}
-                        direction="left"
-                        yoyo={false}
-                        pauseOnHover={false}
-                        disabled={false}
-                        className="font-fredoka font-bold text-8xl uppercase"
-                    />
+                    <ScrollFloat
+                    animationDuration={1}
+                    ease='back.inOut(2)'
+                    scrollStart='center bottom+=50%'
+                    scrollEnd='bottom bottom-=40%'
+                    stagger={0.03}
+                    textClassName="text-2xl font-fredoka font-bold"
+                    >
+                    Ready to make something shitting together?
+                    </ScrollFloat>
+
 
                 </div>
                 <div className="w-1/2 bg-yellow-500 p-8">
