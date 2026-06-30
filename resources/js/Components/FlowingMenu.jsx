@@ -138,21 +138,21 @@ function MenuItem({
         onMouseLeave={handleMouseLeave}>
         {/* Left: category */}
         <span
-          className="justify-self-start uppercase tracking-[0.15em] text-[1.6vh] font-medium opacity-60"
+          className="justify-self-start uppercase tracking-[0.15em] text-[1.6vh] font-fredoka font-medium opacity-60"
           style={{ color: textColor }}>
           {category}
         </span>
 
         {/* Center: main title */}
         <span
-          className="justify-self-center uppercase font-semibold text-[4vh] leading-none"
+          className="justify-self-center uppercase font-fredoka font-semibold text-[4vh] leading-none"
           style={{ color: textColor }}>
           {text}
         </span>
 
         {/* Right: date */}
         <span
-          className="justify-self-end uppercase tracking-[0.15em] text-[1.6vh] font-medium opacity-60"
+          className="justify-self-end uppercase tracking-[0.15em] text-[1.6vh] font-fredoka font-medium opacity-60"
           style={{ color: textColor }}>
           {date}
         </span>
@@ -168,7 +168,7 @@ function MenuItem({
               key={idx}
               style={{ color: marqueeTextColor }}>
               <span
-                className="whitespace-nowrap uppercase font-normal text-[4vh] leading-[1] px-[1vw]">{text}</span>
+                className="whitespace-nowrap uppercase font-fredoka font-normal text-[4vh] leading-[1] px-[1vw]">{text}</span>
               <div
                 className="w-[200px] h-[7vh] my-[2em] mx-[2vw] py-[1em] rounded-[50px] bg-cover bg-center"
                 style={{ backgroundImage: `url(${image})` }} />

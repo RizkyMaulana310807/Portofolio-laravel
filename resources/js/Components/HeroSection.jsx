@@ -165,7 +165,7 @@ export default function HeroSection({
                                                     separator=","
                                                     direction="up"
                                                     duration={1}
-                                                    className="count-up-text text-4xl font-fredoka font-semibold"
+                                                    className="count-up-text text-rm-main text-4xl font-fredoka font-semibold"
                                                     delay={0}
                                                 />
 
