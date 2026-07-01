@@ -1,12 +1,26 @@
 import React from "react";
 import { useState, useRef } from "react";
 import ScrollFloat from "./ScrollFloat";
+import CountUp from "./CountUp";
 
 export default function AboutSection({ aboutText }) {
     const [tab, setTab] = useState("about");
     const containerRef = useRef(null);
 
-
+    const stats = [
+    {
+        count: 100,
+        title: "Mobile Project"
+    },
+    {
+        count: 50,
+        title: "Web Project"
+    },
+    {
+        count: 25,
+        title: "Website Deployed"
+    }
+    ]
     const skills = [
         {
             icon: "fa-php",
@@ -52,29 +66,131 @@ export default function AboutSection({ aboutText }) {
         <div className="w-screen h-screen flex flex-col bg-red-500">
             {/* content */}
             <div className="flex flex-row gap-4 h-full">
-                <div className="w-1/2 p-8 relative flex flex-col items-center justify-center">
-                    <ScrollFloat
-                    animationDuration={1}
-                    ease='back.inOut(2)'
-                    scrollStart='center bottom+=50%'
-                    scrollEnd='bottom bottom-=40%'
-                    stagger={0.03}
-                    textClassName="font-fredoka font-bold"
-                    >
-                    Drop me a letter
-                    </ScrollFloat>
+                <div className="w-1/2 p-8 relative flex flex-col items-center justify-evenly">
+                    <div>
+                        <ScrollFloat
+                        animationDuration={1}
+                        ease='back.inOut(2)'
+                        scrollStart='center bottom+=50%'
+                        scrollEnd='bottom bottom-=40%'
+                        stagger={0.03}
+                        textClassName="font-fredoka text-2xl font-bold">
+                        Got an idea?
+                        </ScrollFloat>
 
-                    <ScrollFloat
-                    animationDuration={1}
-                    ease='back.inOut(2)'
-                    scrollStart='center bottom+=50%'
-                    scrollEnd='bottom bottom-=40%'
-                    stagger={0.03}
-                    textClassName="text-2xl font-fredoka font-bold"
-                    >
-                    Ready to make something shitting together?
-                    </ScrollFloat>
+                        <ScrollFloat
+                        animationDuration={1}
+                        ease='back.inOut(2)'
+                        scrollStart='center bottom+=50%'
+                        scrollEnd='bottom bottom-=40%'
+                        stagger={0.03}
+                        textClassName="text-4xl font-fredoka font-bold"
+                        >
+                        Ready to make something
+                        exciting together?
+                        </ScrollFloat>
+                        
+                        <ScrollFloat
+                        animationDuration={1}
+                        ease='back.inOut(2)'
+                        scrollStart='center bottom+=50%'
+                        scrollEnd='bottom bottom-=40%'
+                        stagger={0.03}
+                        textClassName="text-4xl font-fredoka font-bold"
+                        >
+                        Whether it's a website,
+                        web app, game, automation,
+                        or just an idea you'd like
+                        to explore, I'd love to hear
+                        about it.
+                        </ScrollFloat>
+                    </div>
 
+                    <div className="flex flex-row gap-4">
+                        <div
+                            title="rzkymaulana at LinkedIn"
+                            className="
+                                icon
+                                w-12 h-12 p-2
+                                bg-rm-secondary
+                                flex items-center justify-center
+                                rounded-full
+                                border-3 border-transparent
+                                hover:border-rm-main
+                                hover:bg-rm-main
+                                transition-all duration-250 ease-in-out
+                                group cursor-pointer
+                            ">
+                            <i className="fa-brands fa-linkedin text-[#0A66C2] text-2xl group-hover:text-rm-bright"></i>
+                        </div>
+
+                        <div
+                            title="RizkyMaulana310807 at GitHub"
+                            className="
+                                icon
+                                w-12 h-12 p-2
+                                bg-rm-secondary
+                                flex items-center justify-center
+                                rounded-full
+                                border-3 border-transparent
+                                hover:border-rm-main
+                                hover:bg-rm-main
+                                transition-all duration-250 ease-in-out
+                                group cursor-pointer
+                            ">
+                            <i className="fa-brands fa-github fa-2xl group-hover:text-rm-bright"></i>
+                        </div>
+
+                        <div
+                            title="maulana.rizky.connect@gmail.com"
+                            className="
+                                icon
+                                w-12 h-12 p-2
+                                bg-rm-secondary
+                                flex items-center justify-center
+                                rounded-full
+                                border-3 border-transparent
+                                hover:border-rm-main
+                                hover:bg-rm-main
+                                transition-all duration-250 ease-in-out
+                                group cursor-pointer
+                            ">
+                            <i className="fas fa-envelope fa-xl text-[#EA4335] group-hover:text-rm-bright"></i>
+                        </div>
+                    </div>
+
+                    <div className="flex flex-row justify-evenly bg-yellow-500 w-full">
+                        {stats.map((item, index) => (
+                            <div key={index} className="flex flex-col items-center gap-4">
+                                <div className="flex flex-row">
+                                    <p className="font-quicksand font-bold text-rm-special text-4xl">
+                                        +
+                                    </p>
+
+                                    <CountUp
+                                        from={0}
+                                        to={item.count}
+                                        separator=","
+                                        direction="up"
+                                        duration={1}
+                                        className="count-up-text text-rm-main text-4xl font-fredoka font-semibold"
+                                        delay={0}
+                                    />
+
+                                    <p className="font-quicksand font-bold text-4xl text-transparent">
+                                        +
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <h1 className="text-xl font-fredoka font-bold underline decoration-rm-special">
+                                        {item.title}
+                                    </h1>
+                                </div>
+                            </div>
+                        ))}
+                        
+                    </div>
 
                 </div>
                 <div className="w-1/2 bg-yellow-500 p-8 m-8 flex flex-col justify-center">
